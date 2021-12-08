@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+  <head>  
+    <meta charset="utf-8">
+    <title>JavaScript pra onde</title> 
+    <meta name="description" content="Em HTML, o código JavaScript é inserido entre as tags script, head, e body">
+    <meta name="keywords" content="">
+    <meta name="author" content="Marcus">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mlsicon.ico">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none; 
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    } 
+    table {
+        width: 100%;
+    }
+    thead {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table, td {         
+        border: .5px solid rgba(0,0,0,0.5);
+    }
+    th, td {
+        font-size: 1.2em;
+        padding: 8px;
+        text-align: center;            
+    }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+        }
+    }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#"><img id="icone" src="img/menu.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> 
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+            <a class="nav-link" href="https://mlssystem.github.io/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ Conteúdo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="w3schools.html">W3Schools</a>
+            </div>
+            </li>           
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Java Script pra onde</a>
+            </li>            
+            <li class="nav-item">
+              <a class="nav-link" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a>
+            </li>  
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>-->
+      </div>
+    </nav>
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+      <p id="iniciando"></p> 
+      <h1>JS pra onde?</h1>
+  
+  <h2>A tag &#60;script&#62;</h2>
+  
+  <p>Em HTML, o código JavaScript é inserido entre as tags &#60;<span style="color:green; font-weight: bold">script</span>&#62; e &#60;&#47;<span style="color:green; font-weight: bold">script</span>&#62;</p>
+
+  <p><strong>Exemplo:</strong></p>
+
+  <div class="exemplo">
+  <pre><code>
+  &#60;script&#62;<br>
+  document.getElementById("demo").innerHTML = "Meu primeiro JavaScript";<br>
+  &#60;&#47;script&#62;
+  </code></pre>
+  </div>
+
+  <hr>
+  
+  <h2>Funções e eventos JavaScript</h2>
+  <p>Um JavaScript <strong>function</strong> é um bloco de código JavaScript, que pode ser executado quando "chamado".</p>
+
+  <p>Por exemplo, uma função pode ser chamada quando ocorre um evento , como quando o usuário clica em um botão.</p>
+  <hr>
+  <h2>JavaScript em &lt;head&gt; ou &lt;body&gt;</h2>
+  <p>Você pode colocar qualquer número de scripts em um documento HTML.</p>
+
+  <p>Os scripts podem ser colocados na &lt;<span style="color:green; font-weight: bold">body</span>&gt;, ou na &lt;<span style="color:green; font-weight: bold">head</span>&gt; seção de uma página HTML, ou em ambas.</p>
+  <hr>
+  <h2>JavaScript em &lt;head&gt;</h2>
+  <p>Neste exemplo, um JavaScript functioné colocado na &lt;head&gt; seção de uma página HTML.</p>
+
+  <p>A função é invocada (<span style="color:green; font-weight: bold">chamada</span>) quando um botão é clicado:</p>
+
+  <p><strong>Exemplo:</strong></p>
+
+  <div class="exemplo">
+  <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+
+  &lt;script&gt;
+  function myFunction&#40;&#41; {
+    document.getElementById&#40;"demo"&#41;.innerHTML = "Paragraph changed.";
+  }
+  &lt;&#47;script&gt;
+
+  &lt;&#47;head&gt;
+  &lt;body&gt;
+  &lt;h2&gt;Demo JavaScript in Head&lt;&#47;h2&gt;
+
+  &lt;p id="demo"&gt;A Paragraph&lt;&#47;p&gt;
+
+  &lt;button type="button" onclick="myFunction&#40;&#41;"&gt;Tente&lt;&#47;button&gt;
+
+  &lt;&#47;body&gt;
+  &lt;&#47;html&gt;
+  </code></pre>
+  </div>
+
+  <hr>
+
+  <h2>JavaScript em &lt;body&gt;</h2>
+  <p>Neste exemplo, um JavaScript functioné colocado na &lt;<span style="color:green; font-weight: bold">body</span>&gt; seção de uma página HTML.</p>
+
+  <p>A função é invocada (chamada) quando um botão é clicado:</p>
+
+  <p><strong>Exemplo:</strong></p>
+
+  <div class="exemplo">
+  <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+  &lt;&#47;head&gt;
+  &lt;body&gt;
+  &lt;h2&gt;Demo JavaScript in Head&lt;&#47;h2&gt;
+
+  &lt;p id="demo"&gt;A Paragraph&lt;&#47;p&gt;
+
+  &lt;button type="button" onclick="myFunction&#40;&#41;"&gt;Tente&lt;&#47;button&gt;
+
+  &lt;script&gt;
+  function myFunction&#40;&#41; {
+    document.getElementById&#40;"demo"&#41;.innerHTML = "Paragraph changed.";
+  }
+  &lt;&#47;script&gt;
+
+  &lt;&#47;body&gt;
+  &lt;&#47;html&gt;
+  </code></pre>
+  </div>
+
+  <h2>JavaScript externo</h2>
+  <p>Os scripts também podem ser colocados em arquivos externos:</p>
+
+  <div class="exemplo">
+  <h2><strong>Arquivo externo: meuScript.js</strong></h2>
+  <pre><code>
+  function myFunction() {
+    document.getElementById("demo").innerHTML = "Paragrafo alterado.";
+  }
+  </code></pre>
+  </div>
+
+  <p>Os scripts externos são práticos quando o mesmo código é usado em muitas páginas da web diferentes.</p>
+
+  <p>Os arquivos JavaScript têm a extensão de arquivo <strong>.js</strong> .</p>
+
+  <p>Para usar um script externo, coloque o nome do arquivo de script no srcatributo (fonte) de uma &lt;<span style="color:green; font-weight: bold">script</span>&gt; tag:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+  <pre><code>
+  &lt;script src="myScript.js"&gt;&lt;/script&gt;
+  </code></pre>
+  </div>
+
+  <p>Você pode colocar uma referência de script externa em &lt;head&gt;ou &lt;body&gt;como desejar.</p>
+
+  <p>O script se comportará como se estivesse localizado exatamente onde a &lt;script&gt;tag está localizada.</p>
+
+  <p class="observacao">Os scripts externos não podem conter &lt;<span style="color:green; font-weight: bold">script</span>&gt; tags.</p>
+
+  <h2>Vantagens do JavaScript externo</h2>
+  <p>Colocar scripts em arquivos externos tem algumas vantagens:</p>
+
+  <ul>
+    <li>Ele separa HTML e código</li>
+    <li>Isso torna o HTML e o JavaScript mais fáceis de ler e manter</li>
+    <li>Arquivos JavaScript em cache podem acelerar o carregamento da página</li>
+  </ul>
+
+  <p>Para adicionar vários arquivos de script a uma página - use várias tags de script:</p>
+  
+  <p><strong>Exemplo:</strong></p>
+  
+  <div class="exemplo">
+  <pre><code>
+  &lt;script src="myScript1.js"&gt;&lt;/script&gt;
+  &lt;script src="myScript2.js"&gt;&lt;/script&gt;
+  </code></pre>
+  </div>
+
+  <h2>Referências Externas</h2>
+  <p>Um script externo pode ser referenciado de 3 maneiras diferentes:</p>
+  <ul>
+    <li>Com um URL completo (um endereço da web completo)</li>
+    <li>Com um caminho de arquivo (como / js /)</li>
+    <li>Sem nenhum caminho</li>
+  </ul>
+
+  <p>Este exemplo usa um <strong>URL completo</strong> para vincular a myScript.js:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  
+  <div class="exemplo">
+  <pre><code>
+  &lt;script src="https://www.w3schools.com/js/myScript.js"&gt;&lt;/script&gt;
+  </code></pre>
+  </div>
+
+  <h2>Referências Externas</h2>
+  <p>Um script externo pode ser referenciado de 3 maneiras diferentes:</p>
+  <ul>
+    <li>Com um URL completo (um endereço da web completo)</li>
+    <li>Com um caminho de arquivo (como / js /)</li>
+    <li>Sem nenhum caminho</li>
+  </ul>
+  
+  <p>Este exemplo usa um <strong>URL completo</strong> para vincular a myScript.js:</p>
+  
+  <p><strong>Exemplo:</strong></p>
+  
+  <div class="exemplo">
+  <pre><code>
+  &lt;script src="https://www.w3schools.com/js/myScript.js"&gt;&lt;/script&gt;
+  </code></pre>
+  </div>
+
+  <p>Este exemplo usa um <strong>caminho de arquivo</strong> para vincular a myScript.js:</p>
+  
+  <p><strong>Exemplo:</strong></p>
+  
+  <div class="exemplo">
+  <pre><code>
+  &lt;script src="/js/myScript.js"&gt;&lt;/script&gt;
+  </code></pre>
+  </div>
+
+  <p>Este exemplo não usa <strong>nenhum caminho</strong> para vincular a myScript.js:</p>
+
+  <p>Fonte: <a style="color:blue;" href="https://www.w3schools.com/js/js_whereto.asp">w3schools</a></p>
+  </div>
+</main>
+<hr style="border: 1px solid black;">
+<!-- <footer class="container py-5"> -->
+<footer class="py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/30.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/>
+      <small class="d-block mb-3 text-muted">Copyright &copy;2020 - Marcus LS</small>
+    </div>
+    <div class="col-6 col-md">
+    <h5> Programação </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/estudos.html">Estudos</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/algoritmo">Algoritmo</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/html">HTML</a> </li>
+        <li> <a class="text-muted" href="#"> CSS </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/javascript"> JAVASCRIPT </a> </li>
+        <li> <a class="text-muted" href="#"> PHP </a> </li>
+        <li> <a class="text-muted" href="#"> JAVA </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> BitBlockDig </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/index.html" target="_blank"> BBD </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/criptomoedas.html" target="_blank"> Criptomoedas </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/bitcoin.html" target="_blank"> Bitcoin </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/ethereum.html" target="_blank"> Ethereum </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/litecoin.html" target="_blank"> Litecoin </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Links </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank"> Trabalhadores da Seara </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Sobre </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="#"> Privacidade </a> </li>
+        <li> <a class="text-muted" href="#"> Termos </a> </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    <a href="#"><img style="float: right;" src="img/top.png"></a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>      
+</html>

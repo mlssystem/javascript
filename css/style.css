@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../fonts/bubblegum-sans-regular.otf");
+}
+@font-face {
+        font-family: 'CourierPrime-Regular';
+        src: url("../fonts/courier_prime/CourierPrime-Regular.ttf");
+}
+@font-face {
+        font-family: 'JosefinSans-Regular';
+        src: url("../fonts/josefin_sans/JosefinSans-Regular.ttf");
+}
+h1{
+    font-family: 'FonteLogo';
+    text-align: center;
+    padding: 7px;
+    text-transform: uppercase;
+}
+h2.conteudo-fonteLogo {
+    font-family: 'FonteLogo';
+    font-size: 32px;
+    line-height: 1.4em;
+    margin: 0 0 .4em;
+    font-weight: bold;
+}
+a.conteudo-fonteLogo-2 {
+    color: green;
+}
+
+a.conteudo-fonteLogo-2:hover {
+    color: blue;
+}
+.observacao{
+    background-color: #FEFCEC;
+    padding: 12px;
+    font-size: 14px;
+    font-family: 'JosefinSans-Regular', sans-serif;
+}
+.exemplo {
+    background:#ddd; 
+    padding: 1px; 
+    overflow:auto; 
+}
+code{
+    font-family: 'CourierPrime-Regular', monospace;
+    font-size: 14px;
+}
+
+@media all and (max-width: 768px) {
+    .exemplo{
+     overflow:hide; 
+    }
+}
+
