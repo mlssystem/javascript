@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+  <head>  
+    <meta charset="utf-8">
+    <title>Saída de JavaScript</title> 
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Marcus">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mlsicon.ico">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none; 
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    } 
+    table {
+        width: 100%;
+    }
+    thead {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table, td {         
+        border: .5px solid rgba(0,0,0,0.5);
+    }
+    th, td {
+        font-size: 1.2em;
+        padding: 8px;
+        text-align: center;            
+    }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+        }
+    }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="https://mlssystem.github.io"><img id="icone" src="img/menu.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> 
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+            <a class="nav-link" href="https://mlssystem.github.io/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ Conteúdo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="w3schools.html">W3Schools</a>
+            </div>
+            </li>           
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Saída de JavaScript</a> 
+            </li>            
+            <li class="nav-item">
+              <a class="nav-link" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a>
+            </li>  
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>-->
+      </div>
+    </nav>
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  <p id="iniciando"></p>
+  <h1>Saída de JavaScript</h1>
+
+  <h2>Possibilidades de exibição de JavaScript</h2>
+  <p>JavaScript pode "exibir" dados de maneiras diferentes:</p>
+
+  <ul>
+    <li>Escrevendo em elemento HTML, usando <span class="span-destaque-color">innerHTML</span>.</li>
+    <li>Escrevendo na saída HTML, usando <span class="span-destaque-color">document.write()</span>.</li>
+    <li>Escrevendo em uma caixa de alerta, usando <span class="span-destaque-color">window.alert()</span>.</li>
+    <li>Escrevendo no console do navegador, usando <span class="span-destaque-color">console.log()</span>.</li>
+  </ul>
+
+  <h2>Usando innerHTML</h2>
+  <p>Para acessar um elemento HTML, JavaScript pode usar o <span class="span-destaque-color">document.getElementById(id)</span> método.</p>
+
+  <p>O <span class="span-destaque-color">id </span>atributo define o elemento HTML. A <span class="span-destaque-color">innerHTML</span> propriedade define o conteúdo HTML:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    &lt;!DOCTYPE html&gt;      
+    &lt;html&gt;
+    &lt;body&gt;
+
+    &lt;h1&gt;My First Web Page&lt;/h1&gt;
+    &lt;p&gt;My First Paragraph&lt;/p&gt;
+
+    //Definindo atributo
+    &lt;p id="demo"&gt;&lt;/p&gt;
+
+    &lt;script&gt;
+    document.getElementById("demo").innerHTML = 5 + 6;
+    &lt;/script&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </code></pre>
+  </div>
+
+  <p><strong>Veja o resultado:</strong></p>
+  <hr>
+  <p id="demo"></p>
+  <script type="text/javascript">
+    document.getElementById("demo").innerHTML = 5 + 6;
+  </script>
+  <hr>
+
+  <p class="observacao">Alterar a propriedade innerHTML de um elemento HTML é uma maneira comum de exibir dados em HTML.</p>
+
+  <h2>Usando document.write()</h2>
+  <p>Para fins de teste, é conveniente usar <span class="span-destaque-color">document.write():</span></p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;body&gt;
+
+    &lt;h1&gt;My First Web Page&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+    &lt;script&gt;
+    document.write(5 + 6);
+    &lt;/script&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </code></pre>
+  </div>
+
+  <p><strong>Veja o resultado:</strong></p>
+  <hr>
+  <script type="text/javascript">
+    document.write(5+6);
+  </script>
+  <hr>
+
+  <p class="observacao">O uso de document.write () após o carregamento de um documento HTML excluirá todos os HTML existentes:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;body&gt;
+
+    &lt;h1&gt;My First Web Page&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+    &lt;button type="button" onclick="document.write(5 + 6)"&gt;Try it&lt;/button&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;  
+    </code></pre>
+  </div>
+
+  <p><strong>Veja o resultado clicando no botão:</strong></p>
+
+  <button type="button" onclick="document.write(5+6)">Clique aqui!</button>
+
+  <p class="observacao">O método document.write() deve ser usado apenas para tete.</p>
+
+  <h2>Usando window.alert()</h2>
+  <p>Você pode usar uma caixa de alerta para exibir dados:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;body&gt;
+
+    &lt;h1&gt;My First Web Page&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+    &lt;script&gt;
+    window.alert(5 + 6);
+    &lt;/script&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;  
+    </code></pre>
+  </div>
+
+  <script>
+    window.alert('A soma entre 5 + 6 é igual ' + (5+6));
+  </script>
+
+  <p>Se abriu uma janela de alerta axibindo a soma entre 5+6 com o resultado igual à 11, então oscript foi executado com sucesso!</p>
+
+  <p>Você pode pular a window palavra - chave.</p>
+
+  <p>Em JavaScript, o <strong>objeto</strong> de janela é o objeto de <strong>escopo global</strong>, o que significa que <strong>variáveis, propriedades</strong> e <strong>métodos</strong>, por padrão, pertencem ao objeto de janela. Isso também significa que especificar a window palavra-chave é opcional:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;body&gt;
+
+    &lt;h1&gt;My First Web Page&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+    &lt;script&gt;
+    alert(5 + 6);
+    &lt;/script&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt; 
+    </code></pre>
+  </div>
+
+  <h2>Usando console.log ()</h2>
+  <p>Para fins de depuração, você pode chamar o <span class="span-destaque-color">console.log()</span> método no navegador para exibir os dados.</p>
+
+  <p class="observacao">Você aprenderá mais sobre depuração no capítulo posteior.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;body&gt;
+
+    &lt;script&gt;
+    console.log(5 + 6);
+    &lt;/script&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </code></pre>
+  </div>
+
+  <script type="text/javascript">
+    console.log((5+6)+' é o resultado entre a soma de 5 + 6');
+  </script>
+
+  <p class="observacao">Se abrir o console do navegador verá o resultado da soma entre 5+6</p>
+
+  <h2>Impressão JavaScript</h2>
+  <p>JavaScript não possui nenhum objeto de impressão ou método de impressão.</p>
+
+  <p>Você não pode acessar dispositivos de saída de JavaScript.</p>
+
+  <p>A única exceção é que você pode chamar o <span class="span-destaque-color">window.print()</span> método no navegador para imprimir o conteúdo da janela atual.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+  <pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;body&gt;
+
+    &lt;button onclick="window.print()"&gt;Print this page&lt;/button&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;  
+    </code></pre>
+  </div>
+
+  <p></p>
+
+  <p>Fonte: <a style="color:blue;" href="https://www.w3schools.com/js/js_output.asp" target="_blank">w3schools</a></p>
+  </div>
+</main>
+<hr style="border: 1px solid black;">
+<!-- <footer class="container py-5"> -->
+<footer class="py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/30.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/>
+      <small class="d-block mb-3 text-muted">Copyright &copy;2020 - Marcus LS</small>
+    </div>
+    <div class="col-6 col-md">
+    <h5> Programação </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/estudos.html">Estudos</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/algoritmo">Algoritmo</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/html">HTML</a> </li>
+        <li> <a class="text-muted" href="#"> CSS </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/javascript"> JAVASCRIPT </a> </li>
+        <li> <a class="text-muted" href="#"> PHP </a> </li>
+        <li> <a class="text-muted" href="#"> JAVA </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> BitBlockDig </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/index.html" target="_blank"> BBD </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/criptomoedas.html" target="_blank"> Criptomoedas </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/bitcoin.html" target="_blank"> Bitcoin </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/ethereum.html" target="_blank"> Ethereum </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/litecoin.html" target="_blank"> Litecoin </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Links </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank"> Trabalhadores da Seara </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Sobre </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="#"> Privacidade </a> </li>
+        <li> <a class="text-muted" href="#"> Termos </a> </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    <a href="#"><img style="float: right;" src="img/top.png"></a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>      
+</html>
