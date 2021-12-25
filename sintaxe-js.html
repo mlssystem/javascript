@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title>Sintaxe JS</title>
+    <meta name="description" content="Sintaxe JS">
+    <meta name="keywords" content="Sintaxe JS">
+    <meta name="author" content="Marcus">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mlsicon.ico">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    thead {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table, td {
+        border: .5px solid rgba(0,0,0,0.5);
+    }
+    th, td {
+        font-size: 1.2em;
+        padding: 8px;
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+        }
+    }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="https://mlssystem.github.io"><img id="icone" src="img/menu.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+            <a class="nav-link" href="https://mlssystem.github.io/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ Conteúdo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="w3schools.html">W3Schools</a>
+            </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Sintaxe JS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>-->
+      </div>
+    </nav>
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  <p id="iniciando"></p>
+  <h1>Sintaxe JS</h1>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    // How to create variables:
+    var x;
+    let y;
+
+    // How to use variables:
+    x = 5;
+    y = 6;
+    let z = x + y;
+    </code></pre>
+  </div>
+
+  <h2>Valores javascript</h2>
+  <p>A sintaxe JavaScript define dois tipos de valores:</p>
+
+  <p>• Valores fixos</p>
+  <p>• Valores variáveis</p>
+  
+  <p>Os valores fixos são chamados de Literais.</p>
+
+  <p>Os valores variáveis são chamados de Variáveis.</p>
+
+  <h2>Literais JavaScript</h2>
+  <p>As duas regras de sintaxe mais importantes para valores fixos são:</p>
+
+  <p>1. Os <strong>números</strong> são escritos com ou sem decimais:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    10.50
+    1001
+    </code></pre>
+  </div>
+
+  <p>2. As cordas são <strong>textos</strong>, escritos em cotações duplas ou únicas:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    "John Doe"
+    'John Doe'
+    </code></pre>
+  </div>
+
+  <h2>Variáveis JavaScript</h2>
+  <p>Em uma linguagem de programação, as <strong>variáveis</strong> são usadas para armazenar valores de dados.</p>
+
+  <p>JavaScript usa as palavras-chave e para <strong>declarar</strong> variáveis.varletconst</p>
+
+  <p>Um <strong>sinal igual</strong> é usado para <strong>atribuir valores</strong> a variáveis.</p>
+
+  <p>Neste exemplo, x é definido como uma variável. Em seguida, x é atribuído (dado) o valor 6:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    let x;
+    x = 6;
+    </code></pre>
+  </div>
+
+  <h2>Operadores JavaScript</h2>
+  <p>JavaScript usa <span class="span-destaque-color">operadores aritméticos</span> (+-*/) para <span class="span-destaque-color">calcular</span> valores:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    (5 + 6) * 10
+    </code></pre>
+  </div>
+
+  <p>JavaScript usa um <span class="span-destaque-color">operador de atribuição</span> (=) para <span class="span-destaque-color">atribuir</span> valores a variáveis:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    let x, y;
+    x = 5;
+    y = 6;
+    </code></pre>
+  </div>
+
+  <h2>Expressões JavaScript</h2>
+  <p>Uma expressão é uma combinação de valores, variáveis e operadores, que computa um valor.</p>
+
+  <p>O cálculo é chamado de avaliação.</p>
+
+  <p>Por exemplo, 5 * 10 avalia para 50:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    5 * 10  
+    </code></pre>
+  </div>
+
+  <p>Expressões também podem conter valores variáveis</p>
+  <div class="exemplo">
+    <pre><code>
+     x * 10 
+    </code></pre>  
+  </div>
+
+  <p>Os valores podem se de vários tipos, como números e textos</p>
+  <p>Por exemplo, <q>John</q> + <q></q> + <q>Doe</q>, avalia <q>John Doe</q>:</p>  
+  <div class="exemplo">
+    <pre><code>
+    "John" + " " + "Doe"
+    </code></pre>  
+  </div>
+
+  <h2>Palavras-chave JavaScript</h2>
+  <p>As palavras-chave JavaScript são usadas para identificar ações a serem executadas.</p>
+  
+  <p>A <strong>palavra-chave</strong> diz ao navegador para criar variáveis:let</p>
+  <div class="exemplo">
+    <pre><code>
+    let x, y;
+    x = 5 + 6;
+    y = x * 10;
+    </code></pre>
+  </div>
+  
+  <p>A palavra-chave também diz ao navegador para criar variáveis: <span class="span-destaque-color">var</span></p>
+  <div class="exemplo">
+    <pre><code>
+    var x, y;
+    x = 5 + 6;
+    y = x * 10;
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+  <p>Nestes exemplos, usar <span class="span-destaque-color">var</span> ou <span class="span-destaque-color">let</span> produzirá o mesmo resultado.</p>
+  <p>Você aprenderá mais sobre <span class="span-destaque-color">var</span> e <span class="span-destaque-color">let</span> posteriormente neste tutorial.</p>  
+  </div>
+
+  <h2>Comentários de JavaScript</h2>
+  <p>Nem todas as instruções JavaScript são "executadas".</p>
+
+  <p>O código após barras duplas //ou entre /*e */é tratado como um comentário.</p>
+
+  <p>Os comentários são ignorados e não serão executados:</p>
+  <div class="exemplo">
+    <pre><code>  
+    let x = 5;   // I will be executed
+
+    // x = 6;   I will NOT be executed
+    </code></pre>
+  </div>
+
+  <p class="observacao">Você aprenderá mais sobre comentários em um capítulo posterior.</p>
+
+  <h2>Identificadores JavaScript</h2>
+  <p>Identificadores são nomes.</p>
+
+  Em JavaScript, os identificadores são usados para nomear variáveis (e palavras-chave, funções e rótulos).</p>
+
+  As regras para nomes legais são praticamente as mesmas na maioria das linguagens de programação.</p>
+
+  Em JavaScript, o primeiro caractere deve ser uma letra, um sublinhado (_) ou um cifrão ($).</p>
+
+  Os caracteres subsequentes podem ser letras, dígitos, sublinhados ou cifrões.</p>
+
+  <div class="observacao">
+  <p>Números não são permitidos como o primeiro caractere.</p>
+  <p>Dessa forma, o JavaScript pode distinguir facilmente identificadores de números.</p>  
+  </div>
+
+  <h2>JavaScript diferencia maiúsculas de minúsculas</h2>
+  <p>Todos os identificadores JavaScript são <strong>sensíveis a maiúsculas e minúsculas</strong>.</p>
+
+  <p>As variáveis lastNamee lastname, são duas variáveis diferentes:</p>
+  <div class="exemplo">
+    <pre><code>
+    let lastname, lastName;
+    lastName = "Doe";
+    lastname = "Peterson";
+    </code></pre>
+  </div>
+
+  <p>JavaScript não interpreta <span class="span-destaque-color">LET</span> ou Let como a palavra-chave <span class="span-destaque-color">let</span>.</p>
+
+  <h2>JavaScript e Camel Case</h2>
+  <p>Historicamente, os programadores têm usado diferentes maneiras de juntar várias palavras em um nome de variável:</p>
+
+  <p><strong>Hífens</strong>:</p>
+
+  <p>nome, sobrenome, cartão-mestre, entre cidades.</p>
+
+  <p class="observacao">Hifens não são permitidos em JavaScript. Eles são reservados para subtrações.</p>
+
+  <p><strong>Sublinhado:</strong></p>
+
+  <p></p>first_name, last_name, master_card, inter_city.</p>
+
+  <p><strong>Upper Camel Case (Pascal Case):</strong></p>
+
+  <p></p>FirstName, LastName, MasterCard, InterCity.</p>
+
+  <p><strong>Caixa Camel inferior:</strong></p>
+
+  <p>Os programadores de JavaScript tendem a usar maiúsculas e minúsculas que começam com uma letra minúscula:</p>
+
+  <p>firstName, lastName, masterCard, interCity.</p>
+
+  <h2>Conjunto de caracteres JavaScript</h2>
+  <p>JavaScript usa o <strong>conjunto</strong> de caracteres <strong>Unicode</strong>.</p>
+
+  <p>O Unicode cobre (quase) todos os caracteres, pontuações e símbolos do mundo.</p>
+
+  <p>Para uma análise mais detalhada, estude nossa Referência Unicode Completa.</p>
+
+
+  <p></p>
+
+  <p>Fonte: <a style="color:blue;" href="https://www.w3schools.com/js/js_statements.asp" target="_blank">w3schools</a></p>
+  </div>
+</main>
+<hr style="border: 1px solid black;">
+<!-- <footer class="container py-5"> -->
+<footer class="py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/30.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/>
+      <small class="d-block mb-3 text-muted">Copyright &copy;2020 - Marcus LS</small>
+    </div>
+    <div class="col-6 col-md">
+    <h5> Programação </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/estudos.html">Estudos</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/algoritmo">Algoritmo</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/html">HTML</a> </li>
+        <li> <a class="text-muted" href="#"> CSS </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/javascript"> JAVASCRIPT </a> </li>
+        <li> <a class="text-muted" href="#"> PHP </a> </li>
+        <li> <a class="text-muted" href="#"> JAVA </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> BitBlockDig </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/index.html" target="_blank"> BBD </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/criptomoedas.html" target="_blank"> Criptomoedas </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/bitcoin.html" target="_blank"> Bitcoin </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/ethereum.html" target="_blank"> Ethereum </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/litecoin.html" target="_blank"> Litecoin </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Links </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank"> Trabalhadores da Seara </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Sobre </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="#"> Privacidade </a> </li>
+        <li> <a class="text-muted" href="#"> Termos </a> </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    <a href="#"><img style="float: right;" src="img/top.png"></a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
