@@ -34,13 +34,14 @@ a.conteudo-fonteLogo-2:hover {
 .observacao{
     background-color: #FEFCEC;
     padding: 12px;
-    font-size: 14px;
+    margin-bottom: 7px;
+    font-size: 15px;
     font-family: 'JosefinSans-Regular', sans-serif;
 }
 .exemplo {
-    background:#ddd; 
-    padding: 1px; 
-    overflow:auto; 
+    background:#ddd;
+    padding: 1px;
+    overflow:auto;
     margin-bottom: 25px;
 }
 .span-destaque-color {
@@ -61,7 +62,6 @@ code{
 
 @media all and (max-width: 768px) {
     .exemplo{
-     overflow:hide; 
+     overflow:hide;
     }
 }
-
