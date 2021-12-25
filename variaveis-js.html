@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title>Variáveis de JS</title>
+    <meta name="description" content="Variáveis de JS">
+    <meta name="keywords" content="Variáveis de JS">
+    <meta name="author" content="Marcus">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mlsicon.ico">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    thead {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table, td {
+        border: .5px solid rgba(0,0,0,0.5);
+    }
+    th, td {
+        font-size: 1.2em;
+        padding: 8px;
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+        }
+    }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="https://mlssystem.github.io"><img id="icone" src="img/menu.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+            <a class="nav-link" href="https://mlssystem.github.io/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ Conteúdo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="w3schools.html">W3Schools</a>
+            </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Variáveis de JS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>-->
+      </div>
+    </nav>
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  <p id="iniciando"></p>
+  <h1>Variáveis de JS</h1>
+
+  <h2>4 maneiras de declarar uma variável JavaScript:</h2>
+  <p>• Usando <span class="span-destaque-color">var</span></p>
+  <p>• Usando <span class="span-destaque-color">let</span></p>
+  <p>• Usando <span class="span-destaque-color">const</span></p>
+  <p>• Usando nada</p>
+
+  <h2>O que são variáveis?</h2>
+  <p>Variáveis são contêineres para armazenamento de dados (armazenamento de valores de dados).</p>
+
+  <p>Neste exemplo, x, y e z são variáveis, declarada com a var palavra-chave:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    var x = 5;
+    var y = 6;
+    var z = x + y;
+    </code></pre>
+  </div>
+
+  <p>Neste exemplo, x, y e z são variáveis, declarada com a let palavra-chave:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let y = 6;
+    let z = x + y;
+    </code></pre>
+  </div>
+
+  <p>A partir dos exemplos acima, você pode adivinhar:</p>
+  <p>• x armazena o valor 5</p>
+  <p>• y armazena o valor 6</p>
+  <p>• z armazena o valor 11</p>
+
+  <div class="observacao">
+    <h2>Quando usar var</h2>
+    <p>As palavras-chave var foram usadas em todos os códigos escritos antes de 2015.</p>
+
+    <p>As palavras-chave let e const foram adicionadas ao JavaScript em 2015.</p>
+
+    <p>Se quiser que seu código seja executado em um navegador mais antigo, você deve usar var.</p>
+  </div>
+
+  <p>Neste exemplo, price1, price2 e total são variáveis:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const price1 = 5;
+    const price2 = 6;
+    let total = price1 + price2;
+    </code></pre>
+  </div>
+
+  <p>Ambos os preços são declarados com a const palavra - chave.</p>
+
+  <p>Por isso, os preços são valores constantes.</p>
+
+  <p>Os valores constantes não podem ser reatribuídos (alterados).</p>
+
+  <p>Ainda assim, price1 e price2 são chamados de variáveis.</p>
+
+  <h2>Apenas como álgebra</h2>
+  <p>Assim como na álgebra, as variáveis contêm valores:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let y = 6; 
+    </code></pre>
+  </div>
+
+  <p>Assim como na álgebra, as variáveis são usadas em expressões:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    let z = x + y;
+    </code></pre>
+  </div>
+
+  <p>A partir do exemplo acima, você pode adivinhar que o total é calculado em 11.</p>
+  
+  <div class="observacao">
+  <h3>Observação</h3>  
+  <p>Variáveis são contêineres para armazenar valores de dados.</p>  
+  </div>
+
+  <h2>Identificadores JavaScript</h2>
+  <p>Todas as variáveis JavaScript devem ser identificadas com nomes exclusivos.</p>
+
+  <p>Esses nomes exclusivos são chamados de identificadores.</p>
+
+  <p>Os identificadores podem ser nomes curtos (como x e y) ou nomes mais descritivos (idade, soma, volume total).</p>
+
+  <p>As regras gerais para construir nomes para variáveis (identificadores únicos) são:</p>
+
+  <p>• Os nomes podem conter letras, dígitos, sublinhados e cifrões.</p>
+  <p>• Os nomes devem começar com uma letra</p>
+  <p>• Os nomes também podem começar com $ e _ (mas não os usaremos neste tutorial)</p>
+  <p>• Os nomes diferenciam maiúsculas de minúsculas (y e Y são variáveis diferentes)</p>
+  <p>• Palavras reservadas (como palavras-chave JavaScript) não podem ser usadas como nomes</p>
+
+  <div class="observacao">
+  <h3>Observação</h3>  
+  <p>Os identificadores de JavaScript diferenciam maiúsculas de minúsculas.</p>  
+  </div>
+
+  <h2>O Operador de Atribuição</h2>
+  <p>Em JavaScript, o sinal de igual ( =) é um operador de "atribuição", não um operador "igual a".</p>
+
+  <p>Isso é diferente de álgebra. O seguinte não faz sentido em álgebra:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    x = x + 5  
+    </code></pre>
+  </div>
+
+  <p>Em JavaScript, entretanto, faz todo o sentido: atribui o valor de x + 5 a x.</p>
+
+  <p>(Ele calcula o valor de x + 5 e coloca o resultado em x. O valor de x é incrementado em 5.)</p>
+  
+  <div class="observacao">
+  <h3>Observação</h3>  
+  <p>O operador "igual a" é escrito como ==em JavaScript.</p>
+  </div>
+
+  <h2>Tipos de dados JavaScript</h2>
+  <p>Variáveis JavaScript podem conter números como 100 e valores de texto como "John Doe".</p>
+
+  <p>Na programação, os valores de texto são chamados de strings de texto.</p>
+
+  <p>JavaScript pode lidar com muitos tipos de dados, mas por enquanto, pense apenas em números e strings.</p>
+
+  <p>As strings são escritas entre aspas duplas ou simples. Os números são escritos sem aspas.</p>
+
+  <p>Se você colocar um número entre aspas, ele será tratado como uma string de texto.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const pi = 3.14;
+    let person = "John Doe";
+    let answer = 'Yes I am!';  
+    </code></pre>
+  </div>
+
+  <h2>Declarando (criando) variáveis JavaScript</h2>
+  A criação de uma variável em JavaScript é chamada de "declaração" de uma variável.
+
+  Você declara uma variável JavaScript com a varpalavra-chave:
+
+  <div class="exemplo">
+    <pre><code>
+    var carName;  
+    </code></pre>
+  </div>
+
+  <p>Após a declaração, a variável não tem valor (tecnicamente tem o valor de undefined).</p>
+
+  <p>Para atribuir um valor à variável, use o sinal de igual:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    carName = "Volvo";  
+    </code></pre>
+  </div>
+
+  <p>Você também pode atribuir um valor à variável ao declará-la:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    var carName = "Volvo";  
+    </code></pre>
+  </div>
+
+  <p>No exemplo abaixo, criamos uma variável chamada carNamee atribuímos o valor "Volvo" a ela.</p>
+
+  <p>Em seguida, "exibimos" o valor dentro de um parágrafo HTML com id = "demo":</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    &lt;p id="demo"&gt;&lt;p&gt;
+    &lt;script&gt;
+    var carName = "Volvo";
+    document.getElementById("demo").innerHTML = carName;
+    &lt;script&gt;
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+  <p>É uma boa prática de programação declarar todas as variáveis no início de um script.</p>  
+  </div>
+
+  <h2>Uma afirmação, muitas variáveis</h2>
+  <p>Você pode declarar muitas variáveis em uma instrução.
+
+  <p>Comece a instrução com vare separe as variáveis por <strong>vírgula</strong>:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let person = "John Doe", carName = "Volvo", price = 200;  
+    </code></pre>
+  </div>
+
+  <p>Uma declaração pode abranger várias linhas:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let person = "John Doe",
+    carName = "Volvo",
+    price = 200;
+    </code></pre>
+  </div>
+
+  <h2>Valor = indefinido</h2>
+  <p>Em programas de computador, as variáveis são freqüentemente declaradas sem um valor. O valor pode ser algo que precisa ser calculado ou algo que será fornecido posteriormente, como uma entrada do usuário.</p>
+
+  <p>Uma variável declarada sem um valor terá o valor undefined.</p>
+
+  <p>A variável carName terá o valor undefinedapós a execução desta instrução:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    var carName;  
+    </code></pre>
+  </div>
+
+  <h2>Re-declaração de variáveis JavaScript</h2>
+  <p>Se você declarar novamente uma variável JavaScript, ela não perderá seu valor.</p>
+
+  <p>A variável carNameainda terá o valor "Volvo" após a execução dessas instruções:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    var carName = "Volvo";
+    var carName;  
+    </code></pre>
+  </div>
+
+  <h2>JavaScript Aritmética</h2>
+  <p>Assim como na álgebra, você pode fazer aritmética com variáveis JavaScript, usando operadores como =e +:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    var x = 5 + 2 + 3;  
+    </code></pre>
+  </div>
+
+  <p>Você também pode adicionar strings, mas as strings serão concatenadas:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    var x = "John" + " " + "Doe";  
+    </code></pre>
+  </div>
+
+  <p>Experimente também:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    var x = "5" + 2 + 3;  
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+  <p>Se você colocar um número entre aspas, o resto dos números serão tratados como strings e concatenados.</p>  
+  </div>
+
+  <p>Agora tente isto:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    var x = 2 + 3 + "5";  
+    </code></pre>
+  </div>
+
+  <h2>Cifrão JavaScript $</h2>
+  <p>Lembre-se de que os identificadores (nomes) JavaScript devem começar com:</p>
+
+  <p>• Uma letra (AZ ou az)</p>
+  <p>• Um cifrão ($)</p>
+  <p>• Ou um sublinhado (_)</p>
+
+  <p>Como o JavaScript trata o cifrão como uma letra, os identificadores que contêm $ são nomes de variáveis válidos:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    var $$$ = "Hello World";
+    var $ = 2;
+    var $myMoney = 5;  
+    </code></pre>
+  </div>
+
+  <p>Usar o cifrão não é muito comum em JavaScript, mas os programadores profissionais costumam usá-lo como um apelido para a função principal em uma biblioteca JavaScript.</p>
+
+  <p>Na biblioteca JavaScript jQuery, por exemplo, a função principal $é usada para selecionar elementos HTML. Em jQuery $("p");significa "selecionar todos os elementos p".</p>
+
+  <h2>Sublinhado de JavaScript (_)</h2>
+  <p>Como o JavaScript trata o sublinhado como uma letra, os identificadores que contêm _ são nomes de variáveis válidos:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    var _lastName = "Johnson";
+    var _x = 2;
+    var _100 = 5;  
+    </code></pre>
+  </div>
+
+  <p>Usar o sublinhado não é muito comum em JavaScript, mas uma convenção entre os programadores profissionais é usá-lo como um apelido para variáveis "privadas (ocultas)".</p>
+
+  <p></p>
+
+  <p>Fonte: <a style="color:blue;" href="https://www.w3schools.com/js/js_variables.asp" target="_blank">w3schools</a></p>
+  </div>
+</main>
+<hr style="border: 1px solid black;">
+<!-- <footer class="container py-5"> -->
+<footer class="py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/30.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/>
+      <small class="d-block mb-3 text-muted">Copyright &copy;2020 - Marcus LS</small>
+    </div>
+    <div class="col-6 col-md">
+    <h5> Programação </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/estudos.html">Estudos</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/algoritmo">Algoritmo</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/html">HTML</a> </li>
+        <li> <a class="text-muted" href="#"> CSS </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/javascript"> JAVASCRIPT </a> </li>
+        <li> <a class="text-muted" href="#"> PHP </a> </li>
+        <li> <a class="text-muted" href="#"> JAVA </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> BitBlockDig </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/index.html" target="_blank"> BBD </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/criptomoedas.html" target="_blank"> Criptomoedas </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/bitcoin.html" target="_blank"> Bitcoin </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/ethereum.html" target="_blank"> Ethereum </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/litecoin.html" target="_blank"> Litecoin </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Links </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank"> Trabalhadores da Seara </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Sobre </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="#"> Privacidade </a> </li>
+        <li> <a class="text-muted" href="#"> Termos </a> </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    <a href="#"><img style="float: right;" src="img/top.png"></a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
