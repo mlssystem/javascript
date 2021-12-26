@@ -31,6 +31,15 @@ a.conteudo-fonteLogo-2 {
 a.conteudo-fonteLogo-2:hover {
     color: blue;
 }
+
+a  {
+color: #e7cc71;
+text-shadow: 0.5px 0.5px black;
+}
+
+.fonte-link {
+  padding-top: 43px;
+}
 .observacao{
     background-color: #FEFCEC;
     padding: 20px 0px 20px 10px;

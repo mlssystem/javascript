@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title>Const JS</title>
+    <meta name="description" content="Const JS">
+    <meta name="keywords" content="Const JS">
+    <meta name="author" content="Marcus">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mlsicon.ico">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/browserref.css">    
+    <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    thead {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table, td {
+        border: .5px solid rgba(0,0,0,0.5);
+    }
+    th, td {
+        font-size: 1.2em;
+        padding: 8px;
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+        }
+    }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="https://mlssystem.github.io"><img id="icone" src="img/menu.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+            <a class="nav-link" href="https://mlssystem.github.io/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ Conteúdo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="w3schools.html">W3Schools</a>
+            </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Const JS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>-->
+      </div>
+    </nav>
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  <p id="iniciando"></p>
+  <h1>Const JS</h1>
+  <p>A constpalavra-chave foi introduzida em <a href="https://www.w3schools.com/js/js_es6.asp">ES6 (2015)</a>.</p>
+
+  <p>Variáveis definidas com constnão podem ser redeclaradas.</p>
+
+  <p>Variáveis definidas com constnão podem ser reatribuídas.</p>
+
+  <p>As variáveis definidas com consttêm Bloco de Escopo.</p>
+
+  <h2>Não pode ser reatribuído</h2>
+  <p>Uma constvariável não pode ser reatribuída:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const PI = 3.141592653589793;
+    PI = 3.14;      // This will give an error
+    PI = PI + 10;   // This will also give an error  
+    </code></pre>
+  </div>
+
+  <h2>Deve ser atribuído</h2>
+  <p>As constvariáveis JavaScript devem receber um valor ao serem declaradas:</p>
+
+  <p><strong>Correto</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const PI = 3.14159265359;  
+    </code></pre>
+  </div>
+
+  <p><strong>Incorreto</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const PI;
+    PI = 3.14159265359;
+    </code></pre>
+
+  </div>
+  <div class="observacao">
+    <h3>Quando usar JavaScript const?</h3>
+    <p>Como regra geral, sempre declare uma variável com, a constmenos que você saiba que o valor será alterado.</p>
+    <p>Use constao declarar:</p>
+    <p>• Um novo Array</p>
+    <p>• Um novo objeto</p>
+    <p>• Uma nova função</p>
+    <p>• Um novo RegExp</p>
+  </div>
+
+  <h2>Objetos e matrizes constantes</h2>
+  <p>A palavra const- chave é um pouco enganosa.</p>
+
+  <p>Não define um valor constante. Ele define uma referência constante a um valor.</p>
+
+  <p>Por causa disso, você NÃO pode:</p>
+
+  <p>• Reatribuir um valor constante</p>
+  <p>• Reatribuir uma matriz constante</p>
+  <p>• Reatribuir um objeto constante</p>
+
+  <p>Mas você pode:</p>
+  <p>• Altere os elementos da matriz constante</p>
+  <p>• Altere as propriedades do objeto constante</p>
+
+  <h2>Matrizes constantes</h2>
+  <p>Você pode alterar os elementos de uma matriz constante:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    // You can create a constant array:
+    const cars = ["Saab", "Volvo", "BMW"];
+
+    // You can change an element:
+    cars[0] = "Toyota";
+
+    // You can add an element:
+    cars.push("Audi");  
+    </code></pre>
+  </div>
+
+  <p>Mas você NÃO pode reatribuir a matriz:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const cars = ["Saab", "Volvo", "BMW"];
+
+    cars = ["Toyota", "Volvo", "Audi"];    // ERROR  
+    </code></pre>
+  </div>
+
+  <h2>Objetos Constantes</h2>
+  <p>Você pode alterar as propriedades de um objeto constante:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    // You can create a const object:
+    const car = {type:"Fiat", model:"500", color:"white"};
+
+    // You can change a property:
+    car.color = "red";
+
+    // You can add a property:
+    car.owner = "Johnson";  
+    </code></pre>
+  </div>
+
+  <p>Mas você NÃO pode reatribuir o objeto:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const car = {type:"Fiat", model:"500", color:"white"};
+
+    car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR  
+    </code></pre>
+  </div>
+
+  <h2>Suporte para navegador</h2>
+
+  <p>A constpalavra-chave não é compatível com o Internet Explorer 10 ou anterior.</p>
+
+  <p>A tabela a seguir define as primeiras versões do navegador com suporte total para a constpalavra-chave:</p>
+
+  <table class="browserref notranslate">
+    <tbody><tr style="height:50px;">
+      <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:20%;" class="bsEdge" title="Edge"></th>
+      <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:20%;" class="bsSafari" title="Safari"></th>
+      <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+    </tr>
+    <tr>
+      <td>Chrome 49</td>
+      <td>IE 11 / Edge</td>    
+      <td>Firefox 36</td>
+      <td>Safari 10</td>
+      <td>Opera 36</td>
+    </tr>
+    <tr>
+      <td>Mar, 2016</td>
+      <td>Oct, 2013</td>    
+      <td>Feb, 2015</td>
+      <td>Sep, 2016</td>
+      <td>Mar, 2016</td>
+    </tr></tbody>
+  </table>
+
+  <h2>Escopo do Bloco</h2>
+  <p>Declarar uma variável com consté semelhante a let quando se trata de <strong>Block Scope</strong>.</p>
+
+  <p>O x declarado no bloco, neste exemplo, não é o mesmo o x declarado fora do bloco:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const x = 10;
+    // Here x is 10
+
+    {
+    const x = 2;
+    // Here x is 2
+    }
+
+    // Here x is 10  
+    </code></pre>
+  </div>
+
+  <h2>Redeclarando</h2>
+  <p>Redeclarar uma varvariável JavaScript é permitido em qualquer lugar em um programa:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    var x = 2;     // Allowed
+    var x = 3;     // Allowed
+    x = 4;         // Allowed
+    </code></pre>
+  </div>
+
+  <p>Não é permitido redeclarar um existente var ou let variável para const, no mesmo escopo:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    var x = 2;     // Allowed
+    const x = 2;   // Not allowed
+
+    {
+    let x = 2;     // Allowed
+    const x = 2;   // Not allowed
+    }
+
+    {
+    const x = 2;   // Allowed
+    const x = 2;   // Not allowed
+    }  
+    </code></pre>
+  </div>
+
+  <p>Reatribuir uma constvariável existente , no mesmo escopo, não é permitido:</p>
+
+
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const x = 2;     // Allowed
+    x = 2;           // Not allowed
+    var x = 2;       // Not allowed
+    let x = 2;       // Not allowed
+    const x = 2;     // Not allowed
+
+    {
+      const x = 2;   // Allowed
+      x = 2;         // Not allowed
+      var x = 2;     // Not allowed
+      let x = 2;     // Not allowed
+      const x = 2;   // Not allowed
+    }
+    </code></pre>
+  </div>
+
+  <p>Redeclarar uma variável com const, em outro escopo, ou em outro bloco, é permitido:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const x = 2;       // Allowed
+
+    {
+      const x = 3;   // Allowed
+    }
+
+    {
+      const x = 4;   // Allowed
+    }
+    </code></pre>
+  </div>
+
+  <h2>Const Hoisting</h2>
+  <p>As variáveis definidas com varsão içadas para o topo e podem ser inicializadas a qualquer momento.</p>
+
+  <p>Significado: você pode usar a variável antes de ser declarada:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    carName = "Volvo";
+    var carName;      
+    </code></pre>
+  </div>
+
+  <p>Se você quiser aprender mais sobre içamento, estude o capítulo içamento JavaScript.</p>
+
+  <p>Variáveis definidas com consttambém são içadas ao topo, mas não inicializadas.</p>
+
+  <p>Significado: Usar uma constvariável antes de ser declarada resultará em ReferenceError:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    alert (carName);
+    const carName = "Volvo";  
+    </code></pre>
+  </div>
+
+  <p></p>
+
+  <p class="fonte-link">Fonte: <a href="https://www.w3schools.com/js/js_const.asp" target="_blank">w3schools</a></p>
+  </div>
+</main>
+<hr style="border: 1px solid black;">
+<!-- <footer class="container py-5"> -->
+<footer class="py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/30.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/>
+      <small class="d-block mb-3 text-muted">Copyright &copy;2020 - Marcus LS</small>
+    </div>
+    <div class="col-6 col-md">
+    <h5> Programação </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/estudos.html">Estudos</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/algoritmo">Algoritmo</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/html">HTML</a> </li>
+        <li> <a class="text-muted" href="#"> CSS </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/javascript"> JAVASCRIPT </a> </li>
+        <li> <a class="text-muted" href="#"> PHP </a> </li>
+        <li> <a class="text-muted" href="#"> JAVA </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> BitBlockDig </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/index.html" target="_blank"> BBD </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/criptomoedas.html" target="_blank"> Criptomoedas </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/bitcoin.html" target="_blank"> Bitcoin </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/ethereum.html" target="_blank"> Ethereum </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/litecoin.html" target="_blank"> Litecoin </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Links </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank"> Trabalhadores da Seara </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Sobre </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="#"> Privacidade </a> </li>
+        <li> <a class="text-muted" href="#"> Termos </a> </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    <a href="#"><img style="float: right;" src="img/top.png"></a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
