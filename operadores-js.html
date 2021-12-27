@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title>Operadores JS</title>
+    <meta name="description" content="Operadores JS">
+    <meta name="keywords" content="Operadores JS">
+    <meta name="author" content="Marcus">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mlsicon.ico">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    thead {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table, td {
+        border: .5px solid rgba(0,0,0,0.5);
+    }
+    th, td {
+        font-size: 1.2em;
+        padding: 8px;
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+        }
+    }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="https://mlssystem.github.io"><img id="icone" src="img/menu.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+            <a class="nav-link" href="https://mlssystem.github.io/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ Conteúdo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="w3schools.html">W3Schools</a>
+            </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Operadores JS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>-->
+      </div>
+    </nav>
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  <p id="iniciando"></p>
+  <h1>Operadores de JavaScript</h1>
+
+  <p><strong>Exemplo:</strong></p>
+  <p>Atribuir valores a variáveis e adicioná-los:</p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;         // assign the value 5 to x
+    let y = 2;         // assign the value 2 to y
+    let z = x + y;     // assign the value 7 to z (5 + 2)
+    </code></pre>
+  </div>
+
+  <p>O operador de atribuição ( =) atribui um valor a uma variável.</p>
+
+  <p><strong>Atribuição:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 10;
+    </code></pre>
+  </div>
+
+  <p>O operador de adição ( +) adiciona números:</p>
+
+  <p><strong>Adicionando:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let y = 2;
+    let z = x + y;
+    </code></pre>
+  </div>
+
+  <p>O operador de multiplicação ( *) multiplica números.</p>
+
+  <p><strong>Multiplicando:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let y = 2;
+    let z = x * y;
+    </code></pre>
+  </div>
+
+  <h2>Operadores aritméticos de JavaScript</h2>
+  <p>Operadores aritméticos são usados ​​para realizar operações aritméticas em números:</p>
+
+  <table>
+  <tr>
+  <th style="width:25%">Operator</th>
+  <th>Description</th>
+  </tr>
+  <tr>
+  <td>+</td>
+  <td>Addition</td>
+  </tr>
+  <tr>
+  <td>-</td>
+  <td>Subtraction</td>
+  </tr>
+  <tr>
+  <td>*</td>
+  <td>Multiplication</td>
+  </tr>
+  <tr>
+  <td>**</td>
+  <td>Exponentiation (<a href="js_2016.asp">ES2016</a>)</td>
+  </tr>
+  <tr>
+  <td>/</td>
+  <td>Division</td>
+  </tr>
+  <tr>
+  <td>%</td>
+  <td>Modulus (Division Remainder)</td>
+  </tr>
+  <tr>
+  <td>++</td>
+  <td>Increment</td>
+  </tr>
+  <tr>
+  <td>--</td>
+  <td>Decrement</td>
+  </tr>
+  </table>
+  <div class="observacao">
+  <p>Os operadores aritméticos são totalmente descritos no capítulo JS Aritmética.</p>
+  </div>
+
+  <h2>Operadores de atribuição de JavaScript</h2>
+  <p>Os operadores de atribuição atribuem valores a variáveis ​​JavaScript.</p>
+
+  <table>
+    <tr>
+    <th style="width:25%">Operator</th>
+    <th>Example</th>
+    <th>Same As</th>
+    </tr>
+    <tr>
+    <td>=</td>
+    <td>x = y</td>
+    <td>x = y</td>
+    </tr>
+    <tr>
+    <td>+=</td>
+    <td>x += y</td>
+    <td>x = x + y</td>
+    </tr>
+    <tr>
+    <td>-=</td>
+    <td>x -= y</td>
+    <td>x = x - y</td>
+    </tr>
+    <tr>
+    <td>*=</td>
+    <td>x *= y</td>
+    <td>x = x * y</td>
+    </tr>
+    <tr>
+    <td>/=</td>
+    <td>x /= y</td>
+    <td>x = x / y</td>
+    </tr>
+      <tr>
+    <td>%=</td>
+    <td>x %= y</td>
+    <td>x = x % y</td>
+      </tr>
+    <tr>
+    <td>**=</td>
+    <td>x **= y</td>
+    <td>x = x ** y</td>
+    </tr>
+    </table>
+
+  <p>O operador de atribuição de adição ( +=) adiciona um valor a uma variável.</p>
+
+  <p><strong>Atribuição:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 10;
+    x += 5;
+    </code></pre>
+  </div>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>Os operadores de atribuição são totalmente descritos no capítulo Atribuição de JS .</p>
+  </div>
+
+  <h2>Operadores de string JavaScript</h2>
+  <p>O +operador também pode ser usado para adicionar (concatenar) strings.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text1 = "John";
+    let text2 = "Doe";
+    let text3 = text1 + " " + text2;
+    </code></pre>
+  </div>
+
+  <p><strong>O resultado será:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    John Doe
+    </code></pre>
+  </div>
+
+  <p>O +=operador de atribuição também pode ser usado para adicionar (concatenar) strings:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text1 = "What a very ";
+    text1 += "nice day";
+    </code></pre>
+  </div>
+
+  <p><strong>O resultado de text1 será:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    What a very nice day
+    </code></pre>
+  </div>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+    <p>Quando usado em strings, o operador + é chamado de operador de concatenação.</p>
+  </div>
+
+  <h2>Adicionando Strings e Números</h2>
+  <p>Adicionar dois números retornará a soma, mas adicionar um número e uma string retornará uma string:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5 + 5;
+    let y = "5" + 5;
+    let z = "Hello" + 5;
+    </code></pre>
+  </div>
+
+  <p><strong>O resultado de x , y e z será:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    10
+    55
+    Hello5
+    </code></pre>
+  </div>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>Se você adicionar um número e uma string, o resultado será uma string!</p>
+  </div>
+
+  <table>
+    <tr>
+    <th style="width:12%">Operator</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>==</td>
+    <td>equal to</td>
+    </tr>
+    <tr>
+    <td>===</td>
+    <td>equal value and equal type</td>
+    </tr>
+    <tr>
+    <td>!=</td>
+    <td>not equal</td>
+    </tr>
+    <tr>
+    <td>!==</td>
+    <td>not equal value or not equal type</td>
+    </tr>
+    <tr>
+    <td>&gt;</td>
+    <td>greater than</td>
+    </tr>
+    <tr>
+    <td>&lt;</td>
+    <td>less than</td>
+    </tr>
+    <tr>
+    <td>&gt;=</td>
+    <td>greater than or equal to</td>
+    </tr>
+    <tr>
+    <td>&lt;=</td>
+    <td>less than or equal to</td>
+    </tr>
+    <tr>
+    <td>?</td>
+    <td>ternary operator</td>
+    </tr>
+  </table>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>Os operadores de comparação são totalmente descritos no capítulo Comparações JS.</p>
+  </div>
+
+  <h2>Operadores lógicos de JavaScript</h2>
+
+  <table>
+    <tr>
+    <th style="width:12%">Operator</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>&amp;&amp;</td>
+    <td>logical and</td>
+    </tr>
+    <tr>
+    <td>||</td>
+    <td>logical or</td>
+    </tr>
+    <tr>
+    <td>!</td>
+    <td>logical not</td>
+    </tr>
+  </table>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>Os operadores lógicos são totalmente descritos no capítulo Comparações JS .</p>
+  </div>
+
+  <table class="ws-table-all notranslate">
+    <tr>
+    <th style="width:30%">Operator</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>typeof</td>
+    <td>Returns the type of a variable</td>
+    </tr>
+    <tr>
+    <td>instanceof</td>
+    <td>Returns true if an object is an instance of an object type</td>
+    </tr>
+  </table>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>Os operadores de tipo são totalmente descritos no capítulo Conversão de tipo JS.</p>
+  </div>
+
+  <h2>Operadores JavaScript bit a bit</h2>
+  <p>Os operadores de bits funcionam com números de 32 bits.</p>
+
+  <p>Qualquer operando numérico na operação é convertido em um número de 32 bits. O resultado é convertido de volta para um número JavaScript.</p>
+
+  <table>
+    <tr>
+    <th style="width:12%">Operator</th>
+    <th style="width:25%">Description</th>
+    <th>Example</th>
+    <th>Same as</th>
+    <th>Result</th>
+    <th style="width:15%">Decimal</th>
+    </tr>
+    <tr>
+    <td>&amp;</td>
+    <td>AND</td>
+    <td>5 &amp; 1</td>
+    <td>0101 &amp; 0001</td>
+    <td>0001</td>
+    <td>&nbsp;1</td>
+    </tr>
+    <tr>
+    <td>|</td>
+    <td>OR</td>
+    <td>5 | 1</td>
+    <td>0101 | 0001</td>
+    <td>0101</td>
+    <td>&nbsp;5</td>
+    </tr>
+    <tr>
+    <td>~</td>
+    <td>NOT</td>
+    <td>~ 5</td>
+    <td>&nbsp;~0101</td>
+    <td>1010</td>
+    <td>&nbsp;10</td>
+    </tr>
+    <tr>
+    <td>^</td>
+    <td>XOR</td>
+    <td>5 ^ 1</td>
+    <td>0101 ^ 0001</td>
+    <td>0100</td>
+    <td>&nbsp;4</td>
+    </tr>
+    <tr>
+    <td>&lt;&lt;</td>
+    <td>Zero fill left shift</td>
+    <td>5 &lt;&lt; 1</td>
+    <td>0101 &lt;&lt; 1</td>
+    <td>1010</td>
+    <td>&nbsp;10</td>
+    </tr>
+    <tr>
+    <td>&gt;&gt;</td>
+    <td>Signed right shift</td>
+    <td>5 &gt;&gt; 1</td>
+    <td>0101 &gt;&gt; 1</td>
+    <td>0010</td>
+    <td>&nbsp; 2</td>
+    </tr>
+    <tr>
+    <td>&gt;&gt;&gt;</td>
+    <td>Zero fill right shift</td>
+    <td>5 &gt;&gt;&gt; 1</td>
+    <td>0101 &gt;&gt;&gt; 1</td>
+    <td>0010</td>
+    <td>&nbsp; 2</td>
+    </tr>
+  </table>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>Os exemplos acima usam exemplos sem sinal de 4 bits. Mas o JavaScript usa números assinados de 32 bits.</p>
+  <p>Por causa disso, em JavaScript, ~ 5 não retornará 10. Ele retornará -6.</p>
+  <p>~ 00000000000000000000000000000101 retornará 1111111111111111111111111111111010</p>
+
+  <p>Operadores bit a bit são totalmente descritos no capítulo JS Bitwise .</p>  
+  </div>
+
+  <p></p>
+
+  <p class="fonte-link">Fonte: <a href="https://www.w3schools.com/js/js_operators.asp" target="_blank">w3schools</a></p>
+  </div>
+</main>
+<hr style="border: 1px solid black;">
+<!-- <footer class="container py-5"> -->
+<footer class="py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/30.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/>
+      <small class="d-block mb-3 text-muted">Copyright &copy;2020 - Marcus LS</small>
+    </div>
+    <div class="col-6 col-md">
+    <h5> Programação </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/estudos.html">Estudos</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/algoritmo">Algoritmo</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/html">HTML</a> </li>
+        <li> <a class="text-muted" href="#"> CSS </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/javascript"> JAVASCRIPT </a> </li>
+        <li> <a class="text-muted" href="#"> PHP </a> </li>
+        <li> <a class="text-muted" href="#"> JAVA </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> BitBlockDig </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/index.html" target="_blank"> BBD </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/criptomoedas.html" target="_blank"> Criptomoedas </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/bitcoin.html" target="_blank"> Bitcoin </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/ethereum.html" target="_blank"> Ethereum </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/litecoin.html" target="_blank"> Litecoin </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Links </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank"> Trabalhadores da Seara </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Sobre </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="#"> Privacidade </a> </li>
+        <li> <a class="text-muted" href="#"> Termos </a> </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    <a href="#"><img style="float: right;" src="img/top.png"></a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
