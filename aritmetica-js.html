@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title>Aritmética JS</title>
+    <meta name="description" content="Aritmética JS">
+    <meta name="keywords" content="Aritmética JS">
+    <meta name="author" content="Marcus">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mlsicon.ico">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    #valor-precedencia {
+      overflow:auto;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    thead {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table, td {
+        border: .5px solid rgba(0,0,0,0.5);
+    }
+    th, td {
+        font-size: 1.2em;
+        padding: 8px;
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+        }
+    }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="https://mlssystem.github.io"><img id="icone" src="img/menu.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+            <a class="nav-link" href="https://mlssystem.github.io/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ Conteúdo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="w3schools.html">W3Schools</a>
+            </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Aritmética JS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>-->
+      </div>
+    </nav>
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  <p id="iniciando"></p>
+  <h1>Aritmética JS</h1>
+
+  
+
+  <h2>Operadores aritméticos de JavaScript</h2>
+  <p>Os operadores aritméticos realizam operações aritméticas em números (literais ou variáveis).</p>
+
+  <table>
+    <tr>
+    <th style = "width: 25%"> Operador </th>
+    <th> Descrição </th>
+    </tr>
+    <tr>
+    <td> + </td>
+    <td> Adição </td>
+    </tr>
+    <tr>
+    <td> - </td>
+    <td> Subtração </td>
+    </tr>
+    <tr>
+    <td> * </td>
+    <td> Multiplicação </td>
+    </tr>
+    <tr>
+    <td> ** </td>
+    <td> Exponenciação (<a href="js_es6.asp"> ES2016 </a>) </td>
+    </tr>
+    <tr>
+    <td> / </td>
+    <td> Divisão </td>
+    </tr>
+    <tr>
+    <td>% </td>
+    <td> Módulo (restante) </td>
+    </tr>
+    <tr>
+    <td> ++ </td>
+    <ment> Incremento </td>
+    </tr>
+    <tr>
+    <td> - </td>
+    <td> Redução </td>
+    </tr>
+  </table>
+
+  <h2>Operaçoes aritimeticas</h2>
+  <p>Uma operação aritmética típica opera em dois números.</p>
+
+  <p>Os dois números podem ser literais:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 100 + 50;
+    </code></pre>
+  </div>
+
+  <p>ou variáveis:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = a + b;  
+    </code></pre>
+  </div>
+
+  <p>ou expressões:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = (100 + 50) * a;  
+    </code></pre>
+  </div>
+
+  <h2>Operadores e operandos</h2>
+  <p>Os números (em uma operação aritmética) são chamados de operandos.</p>
+
+  <p>A operação (a ser realizada entre os dois operandos) é definida por um operador.</p>
+
+  <table class="ws-table-all">
+    <tr>
+    <th>Operand</th>
+    <th>Operator</th>
+    <th>Operand</th>
+    </tr>
+    <tr>
+    <td>100</td>
+    <td>+</td>
+    <td>50</td>
+    </tr>
+  </table>
+
+  <h2>Adicionando</h2>
+  <p>O operador de adição ( +) adiciona números:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let y = 2;
+    let z = x + y;  
+    </code></pre>
+  </div>
+
+  <h2>Subtraindo</h2>
+  <p>O operador de subtração ( -) subtrai números.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let y = 2;
+    let z = x - y;  
+    </code></pre>
+  </div>
+
+  <h2>Multiplicando</h2>
+  <p>O operador de multiplicação ( *) multiplica números.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let y = 2;
+    let z = x * y;  
+    </code></pre>
+  </div>
+
+  <h2>Dividindo</h2>
+  <p>O operador de divisão ( /) divide os números.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let y = 2;
+    let z = x / y;  
+    </code></pre>
+  </div>
+
+  <h2>Restante</h2>
+  <p>O operador de módulo ( %) retorna o resto da divisão.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let y = 2;
+    let z = x % y;  
+    </code></pre>
+  </div>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>Na aritmética, a divisão de dois inteiros produz um quociente e um resto.</p>
+
+  <p>Em matemática, o resultado de uma operação de módulo é o resto de uma divisão aritmética.</p>
+  </div>
+
+  <h2>Incrementando</h2>
+  <p>O operador de incremento ( ++) incrementa os números.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    x++;
+    let z = x;  
+    </code></pre>
+  </div>
+
+  <h2>Decrementar</h2>
+  <p>O operador de decremento ( --) diminui os números.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    x--;
+    let z = x;  
+    </code></pre>
+  </div>
+
+  <h2>Exponenciação</h2>
+  <p>O operador de exponenciação ( **) eleva o primeiro operando à potência do segundo operando.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let z = x ** 2; // result is 25  
+    </code></pre>
+  </div>
+
+  <p>x ** y produz o mesmo resultado que Math.pow(x,y):</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let z = Math.pow(x,2);   // result is 25  
+    </code></pre>
+  </div>
+
+  <h2>operador precedente</h2>
+  <p>A precedência do operador descreve a ordem em que as operações são realizadas em uma expressão aritmética.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 100 + 50 * 3;  
+    </code></pre>
+  </div>
+
+  <p>O resultado do exemplo acima é igual a 150 * 3 ou igual a 100 + 150?</p>
+
+  <p>A adição ou multiplicação é feita primeiro?</p>
+
+  <p>Como na matemática escolar tradicional, a multiplicação é feita primeiro.</p>
+
+  <p>Multiplicação ( *) e divisão ( /) têm precedência mais alta do que adição ( +) e subtração ( -).</p>
+
+  <p>E (como na matemática escolar) a precedência pode ser alterada usando parênteses:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = (100 + 50) * 3;  
+    </code></pre>
+  </div>
+
+  <p>Ao usar parênteses, as operações dentro dos parênteses são calculadas primeiro.</p>
+
+  <p>Quando muitas operações têm a mesma precedência (como adição e subtração), elas são calculadas da esquerda para a direita:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 100 + 50 - 3;
+    </code></pre>
+  </div>
+
+  <h2>Valores de precedência do operador JavaScript</h2>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>Entradas em vermelho claro indicam ECMAScript 2015 (ES6) ou superior.</p>  
+  </div>
+
+  <div id="valor-precedencia">
+    <table>
+     <tr>
+      <th style = "width: 10%"> Valor </th>
+      <th style = "width: 15%"> Operador </th>
+      <th> Descrição </th>
+      <th> Exemplo </th>
+     </tr>
+     <tr>
+      <td> 21 </td>
+      <td> () </td>
+      <td> Agrupamento de expressão </td>
+      <td> (3 + 4) </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr>
+      <td> 20 </td>
+      <td>. </td>
+      <td> Membro </td>
+      <td> person.name </td>
+     </tr>
+     <tr>
+      <td> 20 </td>
+      <td> [] </td>
+      <td> Membro </td>
+      <td> pessoa [&quot; nome &quot;] </td>
+     </tr>
+     <tr>
+      <td> 20 </td>
+      <td> () </td>
+      <td> Chamada de função </td>
+      <td> myFunction () </td>
+     </tr>
+     <tr>
+      <td> 20 </td>
+      <td> novo </td>
+      <td> Criar </td>
+      <td> nova data () </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr>
+      <td> 18 </td>
+      <td> ++ </td>
+      <td> Incremento Postfix </td>
+      <td> i ++ </td>
+     </tr>
+     <tr>
+      <td> 18 </td>
+      <td> - </td>
+      <td> Redução do Postfix </td>
+      <td> i-- </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr>
+      <td> 17 </td>
+      <td> ++ </td>
+      <td> Incremento do prefixo </td>
+      <td> ++ i </td>
+     </tr>
+     <tr>
+      <td> 17 </td>
+      <td> - </td>
+      <td> Diminuição do prefixo </td>
+      <td> --i </td>
+     </tr>
+     <tr>
+      <td> 17 </td>
+      <td>! </td>
+      <td> Lógico, não </td>
+      <td>! (x == y) </td>
+     </tr>
+     <tr>
+      <td> 17 </td>
+      <td> typeof </td>
+      <td> Tipo </td>
+      <td> typeof x </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr class = "w3-pale-red">
+      <td> 16 </td>
+      <td> ** </td>
+      <td> Exponenciação (ES2016) </td>
+      <td> 10 ** 2 </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr>
+      <td> 15 </td>
+      <td> * </td>
+      <td> Multiplicação </td>
+      <td> 10 * 5 </td>
+     </tr>
+     <tr>
+      <td> 15 </td>
+      <td> / </td>
+      <td> Divisão </td>
+      <td> 5/10 </td>
+     </tr>
+     <tr>
+      <td> 15 </td>
+      <td>% </td>
+      <td> Restante da Divisão </td>
+      <td> 10% 5 </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr>
+      <td> 14 </td>
+      <td> + </td>
+      <td> Adição </td>
+      <td> 10 + 5 </td>
+     </tr>
+     <tr>
+      <td> 14 </td>
+      <td> - </td>
+      <td> Subtração </td>
+      <td> 10 - 5 </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr>
+      <td> 13 </td>
+      <td> &lt; &lt; </td>
+      <td> Shift para a esquerda </td>
+      <td> x &lt; &lt; 2 </td>
+     </tr>
+     <tr>
+      <td> 13 </td>
+      <td> &gt; &gt; </td>
+      <td> Deslocar para a direita </td>
+      <td> x &gt; &gt; 2 </td>
+     </tr>
+     <tr>
+      <td> 13 </td>
+      <td> &gt; &gt; &gt; </td>
+      <td> Shift para a direita (sem sinal) </td>
+      <td> x &gt; &gt; &gt; 2 </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr>
+      <td> 12 </td>
+      <td> &lt; </td>
+      <td> Menos de </td>
+      <td> x &lt; y &nbsp; </td>
+     </tr>
+     <tr>
+      <td> 12 </td>
+      <td> &lt; = </td>
+      <td> Menor ou igual </td>
+      <td> x &lt; = y </td>
+     </tr>
+     <tr>
+      <td> 12 </td>
+      <td> &gt; </td>
+      <td> Maior que </td>
+      <td> x &gt; y </td>
+     </tr>
+     <tr>
+      <td> 12 </td>
+      <td> &gt; = </td>
+      <td> Maior ou igual </td>
+      <td> x &gt; = y </td>
+     </tr>
+     <tr class = "w3-pale-red">
+      <td> 12 </td>
+      <td> em </td>
+      <td> Propriedade no objeto </td>
+      <td> "PI" em matemática </td>
+     </tr>
+     <tr class = "w3-pale-red">
+      <td> 12 </td>
+      <td> instância </td>
+      <td> Instância do objeto </td>
+      <td> instância da matriz </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr>
+      <td> 11 </td>
+      <td> == </td>
+      <td> Igualdade </td>
+      <td> x == y </td>
+     </tr>
+     <tr>
+      <td> 11 </td>
+      <td> === </td>
+      <td> Igualdade estrita </td>
+      <td> x === y </td>
+     </tr>
+     <tr>
+      <td> 11 </td>
+      <td>! = </td>
+      <td> Desiguais </td>
+      <td> x! = y </td>
+     </tr>
+     <tr>
+      <td> 11 </td>
+      <td>! == </td>
+      <td> Estritamente desigual </td>
+      <td> x! == y </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr>
+      <td> 10 </td>
+      <td> &amp; </td>
+      <td> E bit a bit </td>
+      <td> x &amp; y </td>
+     </tr>
+     <tr>
+      <td> 9 </td>
+      <td> ^ </td>
+      <td> XOR bit a bit </td>
+      <td> x ^ y </td>
+     </tr>
+     <tr>
+      <td> 8 </td>
+      <td> | </td>
+      <td> Bitwise OU </td>
+      <td> x | y </td>
+     </tr>
+     <tr>
+      <td> 7 </td>
+      <td> &amp; &amp; </td>
+      <td> Lógico E </td>
+      <td> x &amp; &amp; y </td>
+     </tr>
+     <tr>
+      <td> 6 </td>
+      <td> || </td>
+      <td> Lógico OU </td>
+      <td> x || y </td>
+     </tr>
+     <tr>
+      <td> 5 </td>
+      <td> ?? </td>
+      <td> Coalescência nula </td>
+      <td> x ?? y </td>
+     </tr>
+     <tr>
+      <td> 4 </td>
+      <td>? : </td>
+      <td> Condição </td>
+      <td>? "Sim": "Não" </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr>
+      <td> 3 </td>
+      <td> + = </td>
+      <td> Atribuição </td>
+      <td> x + = y </td>
+     </tr>
+     <tr>
+      <td> 3 </td>
+      <td> / = </td>
+      <td> Atribuição </td>
+      <td> x / = y </td>
+     </tr>
+     <tr>
+      <td> 3 </td>
+      <td> - = </td>
+      <td> Atribuição </td>
+      <td> x - = y </td>
+     </tr>
+     <tr>
+      <td> 3 </td>
+      <td> * = </td>
+      <td> Atribuição </td>
+      <td> x * = y </td>
+     </tr>
+     <tr>
+      <td> 3 </td>
+      <td>% = </td>
+      <td> Atribuição </td>
+      <td> x% = y </td>
+     </tr>
+     <tr>
+      <td> 3 </td>
+      <td> &lt; &lt; = </td>
+      <td> Atribuição </td>
+      <td> x &lt; &lt; = y </td>
+     </tr>
+     <tr>
+      <td> 3 </td>
+      <td> &gt; &gt; = </td>
+      <td> Atribuição </td>
+      <td> x &gt; &gt; = y </td>
+     </tr>
+     <tr>
+      <td> 3 </td>
+      <td> &gt; &gt; &gt; = </td>
+      <td> Atribuição </td>
+      <td> x &gt; &gt; &gt; = y </td>
+     </tr>
+     <tr>
+      <td> 3 </td>
+      <td> &amp; = </td>
+      <td> Atribuição </td>
+      <td> x &amp; = y </td>
+     </tr>
+     <tr>
+      <td> 3 </td>
+      <td> ^ = </td>
+      <td> Atribuição </td>
+      <td> x ^ = y </td>
+     </tr>
+     <tr>
+      <td> 3 </td>
+      <td> | = </td>
+      <td> Atribuição </td>
+      <td> x | = y </td>
+     </tr>
+     <tr>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+     </tr>
+     <tr class = "w3-pale-red">
+      <td> 2 </td>
+      <td> rendimento </td>
+      <td> Função de pausa </td>
+      <td> rendimento x </td>
+     </tr>
+     <tr>
+      <td> 1 </td>
+      <td>, </td>
+      <td> Vírgula </td>
+      <td> 5, 6 </td>
+     </tr>
+    </table>
+  </div>  
+
+
+  <p></p>
+
+  <p class="fonte-link">Fonte: <a href="https://www.w3schools.com/" target="_blank">w3schools</a></p>
+  </div>
+</main>
+<hr style="border: 1px solid black;">
+<!-- <footer class="container py-5"> -->
+<footer class="py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/30.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/>
+      <small class="d-block mb-3 text-muted">Copyright &copy;2020 - Marcus LS</small>
+    </div>
+    <div class="col-6 col-md">
+    <h5> Programação </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/estudos.html">Estudos</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/algoritmo">Algoritmo</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/html">HTML</a> </li>
+        <li> <a class="text-muted" href="#"> CSS </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/javascript"> JAVASCRIPT </a> </li>
+        <li> <a class="text-muted" href="#"> PHP </a> </li>
+        <li> <a class="text-muted" href="#"> JAVA </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> BitBlockDig </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/index.html" target="_blank"> BBD </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/criptomoedas.html" target="_blank"> Criptomoedas </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/bitcoin.html" target="_blank"> Bitcoin </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/ethereum.html" target="_blank"> Ethereum </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/litecoin.html" target="_blank"> Litecoin </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Links </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank"> Trabalhadores da Seara </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Sobre </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="#"> Privacidade </a> </li>
+        <li> <a class="text-muted" href="#"> Termos </a> </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    <a href="#"><img style="float: right;" src="img/top.png"></a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
