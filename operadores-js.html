@@ -21,6 +21,9 @@
         -ms-user-select: none;
         user-select: none;
     }
+    #bit-bit {
+      overflow:auto;
+    }
     table {
         width: 100%;
         margin-bottom: 20px;
@@ -89,13 +92,13 @@
   <p>Atribuir valores a variáveis e adicioná-los:</p>
   <div class="exemplo">
     <pre><code>
-    let x = 5;         // assign the value 5 to x
-    let y = 2;         // assign the value 2 to y
-    let z = x + y;     // assign the value 7 to z (5 + 2)
+    let x = 5;     // atribua o valor 5 to x
+    let y = 2;     // atribua o valor 2 to y
+    let z = x + y; // atribua o valor 7 to z (5 + 2)
     </code></pre>
   </div>
 
-  <p>O operador de atribuição ( =) atribui um valor a uma variável.</p>
+  <p>O operador de atribuição (=) atribui um valor a uma variável.</p>
 
   <p><strong>Atribuição:</strong></p>
   <div class="exemplo">
@@ -104,7 +107,7 @@
     </code></pre>
   </div>
 
-  <p>O operador de adição ( +) adiciona números:</p>
+  <p>O operador de adição (+) adiciona números:</p>
 
   <p><strong>Adicionando:</strong></p>
   <div class="exemplo">
@@ -115,7 +118,7 @@
     </code></pre>
   </div>
 
-  <p>O operador de multiplicação ( *) multiplica números.</p>
+  <p>O operador de multiplicação (*) multiplica números.</p>
 
   <p><strong>Multiplicando:</strong></p>
   <div class="exemplo">
@@ -127,7 +130,7 @@
   </div>
 
   <h2>Operadores aritméticos de JavaScript</h2>
-  <p>Operadores aritméticos são usados ​​para realizar operações aritméticas em números:</p>
+  <p>Operadores aritméticos são usados para realizar operações aritméticas em números:</p>
 
   <table>
   <tr>
@@ -148,7 +151,7 @@
   </tr>
   <tr>
   <td>**</td>
-  <td>Exponentiation (<a href="js_2016.asp">ES2016</a>)</td>
+  <td>Exponentiation (ES2016)</td>
   </tr>
   <tr>
   <td>/</td>
@@ -172,7 +175,7 @@
   </div>
 
   <h2>Operadores de atribuição de JavaScript</h2>
-  <p>Os operadores de atribuição atribuem valores a variáveis ​​JavaScript.</p>
+  <p>Os operadores de atribuição atribuem valores a variáveis JavaScript.</p>
 
   <table>
     <tr>
@@ -375,16 +378,16 @@
 
   <table class="ws-table-all notranslate">
     <tr>
-    <th style="width:30%">Operator</th>
-    <th>Description</th>
+    <th style="width:30%">Operador</th>
+    <th>Descrição</th>
     </tr>
     <tr>
     <td>typeof</td>
-    <td>Returns the type of a variable</td>
+    <td>Retorna o tipo de uma variável</td>
     </tr>
     <tr>
     <td>instanceof</td>
-    <td>Returns true if an object is an instance of an object type</td>
+    <td>Retorna verdadeiro se um objeto é uma instância de um tipo de objeto</td>
     </tr>
   </table>
 
@@ -398,72 +401,74 @@
 
   <p>Qualquer operando numérico na operação é convertido em um número de 32 bits. O resultado é convertido de volta para um número JavaScript.</p>
 
-  <table>
-    <tr>
-    <th style="width:12%">Operator</th>
-    <th style="width:25%">Description</th>
-    <th>Example</th>
-    <th>Same as</th>
-    <th>Result</th>
-    <th style="width:15%">Decimal</th>
-    </tr>
-    <tr>
-    <td>&amp;</td>
-    <td>AND</td>
-    <td>5 &amp; 1</td>
-    <td>0101 &amp; 0001</td>
-    <td>0001</td>
-    <td>&nbsp;1</td>
-    </tr>
-    <tr>
-    <td>|</td>
-    <td>OR</td>
-    <td>5 | 1</td>
-    <td>0101 | 0001</td>
-    <td>0101</td>
-    <td>&nbsp;5</td>
-    </tr>
-    <tr>
-    <td>~</td>
-    <td>NOT</td>
-    <td>~ 5</td>
-    <td>&nbsp;~0101</td>
-    <td>1010</td>
-    <td>&nbsp;10</td>
-    </tr>
-    <tr>
-    <td>^</td>
-    <td>XOR</td>
-    <td>5 ^ 1</td>
-    <td>0101 ^ 0001</td>
-    <td>0100</td>
-    <td>&nbsp;4</td>
-    </tr>
-    <tr>
-    <td>&lt;&lt;</td>
-    <td>Zero fill left shift</td>
-    <td>5 &lt;&lt; 1</td>
-    <td>0101 &lt;&lt; 1</td>
-    <td>1010</td>
-    <td>&nbsp;10</td>
-    </tr>
-    <tr>
-    <td>&gt;&gt;</td>
-    <td>Signed right shift</td>
-    <td>5 &gt;&gt; 1</td>
-    <td>0101 &gt;&gt; 1</td>
-    <td>0010</td>
-    <td>&nbsp; 2</td>
-    </tr>
-    <tr>
-    <td>&gt;&gt;&gt;</td>
-    <td>Zero fill right shift</td>
-    <td>5 &gt;&gt;&gt; 1</td>
-    <td>0101 &gt;&gt;&gt; 1</td>
-    <td>0010</td>
-    <td>&nbsp; 2</td>
-    </tr>
-  </table>
+  <div id="bit-bit">
+    <table>
+      <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+      <th>Same as</th>
+      <th>Result</th>
+      <th>Decimal</th>
+      </tr>
+      <tr>
+      <td>&amp;</td>
+      <td>E</td>
+      <td>5 &amp; 1</td>
+      <td>0101 &amp; 0001</td>
+      <td>0001</td>
+      <td>&nbsp;1</td>
+      </tr>
+      <tr>
+      <td>|</td>
+      <td>OU</td>
+      <td>5 | 1</td>
+      <td>0101 | 0001</td>
+      <td>0101</td>
+      <td>&nbsp;5</td>
+      </tr>
+      <tr>
+      <td>~</td>
+      <td>NÃO</td>
+      <td>~ 5</td>
+      <td>&nbsp;~0101</td>
+      <td>1010</td>
+      <td>&nbsp;10</td>
+      </tr>
+      <tr>
+      <td>^</td>
+      <td>XOR</td>
+      <td>5 ^ 1</td>
+      <td>0101 ^ 0001</td>
+      <td>0100</td>
+      <td>&nbsp;4</td>
+      </tr>
+      <tr>
+      <td>&lt;&lt;</td>
+      <td>Zero preenchimento deslocamento para a esquerda</td>
+      <td>5 &lt;&lt; 1</td>
+      <td>0101 &lt;&lt; 1</td>
+      <td>1010</td>
+      <td>&nbsp;10</td>
+      </tr>
+      <tr>
+      <td>&gt;&gt;</td>
+      <td>Turno à direita assinado</td>
+      <td>5 &gt;&gt; 1</td>
+      <td>0101 &gt;&gt; 1</td>
+      <td>0010</td>
+      <td>&nbsp; 2</td>
+      </tr>
+      <tr>
+      <td>&gt;&gt;&gt;</td>
+      <td>Zero preenchimento deslocamento para a direita</td>
+      <td>5 &gt;&gt;&gt; 1</td>
+      <td>0101 &gt;&gt;&gt; 1</td>
+      <td>0010</td>
+      <td>&nbsp; 2</td>
+      </tr>
+    </table>
+  </div>  
 
   <p><span class="span-destaque-color"></span></p>
   <div class="observacao">
