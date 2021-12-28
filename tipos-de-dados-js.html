@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title>Tipos de dados JS</title>
+    <meta name="description" content="Tipos de dados JS">
+    <meta name="keywords" content="Tipos de dados JS">
+    <meta name="author" content="Marcus">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mlsicon.ico">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    #tbl-overflow {
+      overflow: auto;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    thead {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table, td {
+        border: .5px solid rgba(0,0,0,0.5);
+    }
+    th, td {
+        font-size: 1.2em;
+        padding: 8px;
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+        }
+    }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="https://mlssystem.github.io"><img id="icone" src="img/menu.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+            <a class="nav-link" href="https://mlssystem.github.io/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ Conteúdo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="w3schools.html">W3Schools</a>
+            </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Tipos de dados JS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>-->
+      </div>
+    </nav>
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  <p id="iniciando"></p>
+  <h1>Tipos de dados JS</h1>
+  <p>Variáveis JavaScript podem conter diferentes tipos de dados: números, strings, objetos e mais:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let length = 16;   // Number
+    let lastName = "Johnson";   // String
+    let x = {firstName:"John", lastName:"Doe"};   // Object      
+    </code></pre>
+  </div>
+
+  <h2>O conceito de tipos de dados</h2>
+  <p>Na programação, os tipos de dados são um conceito importante.</p>
+
+  <p>Para poder operar em variáveis, é importante saber algo sobre o tipo.</p>
+
+  <p>Sem tipos de dados, um computador não pode resolver isso com segurança:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    let x = 16 + "Volvo";  
+    </code></pre>
+  </div>
+
+  <p>Faz algum sentido adicionar "Volvo" a dezesseis? Isso produzirá um erro ou um resultado?</p>
+
+  <p>JavaScript tratará o exemplo acima como:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    let x = "16" + "Volvo";  
+    </code></pre>
+  </div>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>Ao adicionar um número e uma string, o JavaScript tratará o número como uma string.</p>  
+  </div>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 16 + "Volvo";  
+    </code></pre>
+  </div>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = "Volvo" + 16;  
+    </code></pre>
+  </div>
+
+  <p>JavaScript avalia expressões da esquerda para a direita. Sequências diferentes podem produzir resultados diferentes:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 16 + 4 + "Volvo";  
+    </code></pre>
+  </div>
+
+  <p><strong>Resultado</strong></p>
+  <div class="exemplo">
+    <pre><code>
+     20Volvo 
+    </code></pre>
+  </div>
+
+  <p><strong>JavaScript:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = "Volvo" + 16 + 4;  
+    </code></pre>
+  </div>
+
+  <p><strong>Resultado</strong></p>
+  <div class="exemplo">
+    <pre><code>
+     Volvo164
+    </code></pre>
+  </div>
+
+  <p>No primeiro exemplo, JavaScript trata 16 e 4 como números, até atingir "Volvo".</p>
+
+  <p>No segundo exemplo, como o primeiro operando é uma string, todos os operandos são tratados como strings.</p>
+
+  <h2>Tipos de JavaScript são dinâmicos</h2>
+  <p>JavaScript possui tipos dinâmicos. Isso significa que a mesma variável pode ser usada para conter diferentes tipos de dados:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x;   // Now x is undefined
+    x = 5;   // Now x is a Number
+    x = "John";   // Now x is a String  
+    </code></pre>
+  </div>
+
+  <h2>JavaScript Strings</h2>
+  <p>Uma string (ou uma string de texto) é uma série de caracteres como "John Doe".</p>
+
+  <p>As strings são escritas com aspas. Você pode usar aspas simples ou duplas:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let carName1 = "Volvo XC60";   // Using double quotes
+    let carName2 = 'Volvo XC60';   // Using single quotes
+    </code></pre>
+  </div>
+
+  <p>Você pode usar aspas dentro de uma string, desde que não correspondam às aspas em torno da string:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let answer1 = "It's alright";   // Single quote inside double quotes
+    let answer2 = "He is called 'Johnny'";   // Single quotes inside double quotes
+    let answer3 = 'He is called "Johnny"';   // Double quotes inside single quotes
+    </code></pre>
+  </div>
+
+  <h2>Números de JavaScript</h2>
+  <p>JavaScript possui apenas um tipo de número.</p>
+
+  <p>Os números podem ser escritos com ou sem decimais:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x1 = 34.00;   // Written with decimals
+    let x2 = 34;      // Written without decimals  
+    </code></pre>
+  </div>
+
+  <p>Números muito grandes ou muito pequenos podem ser escritos com notação científica (exponencial):</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let y = 123e5;      // 12300000
+    let z = 123e-5;     // 0.00123  
+    </code></pre>
+  </div>
+
+  <h2>Booleanos JavaScript</h2>
+  <p>Os booleanos podem ter apenas dois valores: trueou false.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = 5;
+    let y = 5;
+    let z = 6;
+    (x == y)   // Returns true
+    (x == z)   // Returns false  
+    </code></pre>
+  </div>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    </code></pre>
+  </div>
+
+  <p>Os booleanos costumam ser usados ​​em testes condicionais.</p>
+
+  <h2>Arrays JavaScript</h2>
+  <p>As matrizes de JavaScript são escritas com colchetes.</p>
+
+  <p>Os itens da matriz são separados por vírgulas.</p>
+
+  <p>O código a seguir declara (cria) uma matriz chamada cars, contendo três itens (nomes de carros):</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const cars = ["Saab", "Volvo", "BMW"];  
+    </code></pre>
+  </div>
+
+  <p>Os índices de matriz são baseados em zero, o que significa que o primeiro item é [0], o segundo é [1] e assim por diante.</p>
+
+  <h2>Objetos JavaScript</h2>
+  <p>Os objetos JavaScript são escritos com chaves {}.</p>
+
+  <p>As propriedades do objeto são escritas como pares nome: valor, separados por vírgulas.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};  
+    </code></pre>
+  </div>
+
+  <p>O objeto (pessoa) no exemplo acima tem 4 propriedades: firstName, lastName, age e eyeColor.</p>
+
+  <h2>O tipo de operador</h2>
+  <p>Você pode usar o typeofoperador JavaScript para encontrar o tipo de uma variável JavaScript.</p>
+
+  <p>O typeofoperador retorna o tipo de uma variável ou expressão:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    typeof ""           // Returns "string"
+    typeof "John"       // Returns "string"
+    typeof "John Doe"   // Returns "string"  
+    </code></pre>
+  </div>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    typeof 0         // Returns "number"
+    typeof 314       // Returns "number"
+    typeof 3.14      // Returns "number"
+    typeof (3)       // Returns "number"
+    typeof (3 + 4)   // Returns "number"  
+    </code></pre>
+  </div>
+
+  <h2>Undefined</h2>
+  <p>Em JavaScript, uma variável sem valor tem o valor undefined. O tipo também é undefined.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let car;    // Value is undefined, type is undefined  
+    </code></pre>
+  </div>
+
+  <p>Qualquer variável pode ser esvaziada, definindo o valor para undefined. O tipo também será undefined.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    car = undefined;  // Value is undefined, type is undefined  
+    </code></pre>
+  </div>
+
+  <h2>Valores Vazios</h2>
+  <p>Um valor vazio não tem nada a ver com undefined.</p>
+
+  <p>Uma string vazia tem um valor e um tipo legais.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let car = "";    // The value is "", the typeof is "string"  
+    </code></pre>
+  </div>
+
+  <p></p>
+
+  <p class="fonte-link">Fonte: <a href="https://www.w3schools.com/js/js_datatypes.asp" target="_blank">w3schools</a></p>
+  </div>
+</main>
+<hr style="border: 1px solid black;">
+<!-- <footer class="container py-5"> -->
+<footer class="py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/30.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/>
+      <small class="d-block mb-3 text-muted">Copyright &copy;2020 - Marcus LS</small>
+    </div>
+    <div class="col-6 col-md">
+    <h5> Programação </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/estudos.html">Estudos</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/algoritmo">Algoritmo</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/html">HTML</a> </li>
+        <li> <a class="text-muted" href="#"> CSS </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/javascript"> JAVASCRIPT </a> </li>
+        <li> <a class="text-muted" href="#"> PHP </a> </li>
+        <li> <a class="text-muted" href="#"> JAVA </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> BitBlockDig </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/index.html" target="_blank"> BBD </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/criptomoedas.html" target="_blank"> Criptomoedas </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/bitcoin.html" target="_blank"> Bitcoin </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/ethereum.html" target="_blank"> Ethereum </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/litecoin.html" target="_blank"> Litecoin </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Links </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank"> Trabalhadores da Seara </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Sobre </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="#"> Privacidade </a> </li>
+        <li> <a class="text-muted" href="#"> Termos </a> </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    <a href="#"><img style="float: right;" src="img/top.png"></a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
