@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos JS</title>
+    <meta name="description" content="Objetos JS">
+    <meta name="keywords" content="Objetos JS">
+    <meta name="author" content="Marcus">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mlsicon.ico">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .tbl-overflow {
+      overflow: auto;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    thead {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table, td {
+        border: .5px solid rgba(0,0,0,0.5);
+    }
+    th, td {
+        font-size: 1.2em;
+        padding: 8px;
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+        }
+    }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="https://mlssystem.github.io"><img id="icone" src="img/menu.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+            <a class="nav-link" href="https://mlssystem.github.io/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ Conteúdo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="w3schools.html">W3Schools</a>
+            </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Objetos JS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>-->
+      </div>
+    </nav>
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  <p id="iniciando"></p>
+  <h1>Objetos JavaScript</h1>
+  <h2>Objetos, propriedades e métodos da vida real</h2>
+  <p>Na vida real, um carro é um objeto.</p>
+
+  <p>Um carro tem propriedades como peso e cor, e métodos como start e stop:</p>
+
+  <div class="tbl-overflow">
+    <table>
+    <tr>
+    <th style="width:370px">
+    Object
+    </th>
+    <th>
+    Properties
+    </th>
+    <th>
+    Methods
+    </th>
+    </tr>
+    <tr>
+    <td>
+    <img src="img/ferrari-left.png" style="width:200px;height:112px;margin-left:-68px;margin-top:-40px">
+    </td>
+    <td>
+    <br>car.name = Ferrari<br><br>
+    car.model = F1<br><br>
+    car.weight = 850kg<br><br>
+    car.color = red
+    </td>
+    <td>
+    <br>car.start()<br><br>
+    car.drive()<br><br>
+    car.brake()
+    <br><br>car.stop()</td>
+    </tr>
+    </table>
+  </div>
+  <p>Todos os carros têm as mesmas propriedades , mas os valores das propriedades diferem de carro para carro.</p>
+
+  <p>Todos os carros têm os mesmos métodos , mas os métodos são executados em momentos diferentes.</p>
+
+  <h2>Objetos JavaScript</h2>
+  <p>Você já aprendeu que as variáveis JavaScript são contêineres para valores de dados.</p>
+
+  <p>Este código atribui um valor simples (Fiat) a uma variável chamada carro:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let car = "Fiat";
+    </code></pre>
+  </div>
+
+  <p>Os objetos também são variáveis. Mas os objetos podem conter muitos valores.</p>
+
+  <p>This code assigns many values (Fiat, 500, white) to a variable named car:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const car = {type:"Fiat", model:"500", color:"white"};
+    </code></pre>
+  </div>
+
+  <p>Os valores são escritos como pares nome: valor (nome e valor separados por dois pontos).</p>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>É uma prática comum declarar objetos com a palavra-chave const.</p>  
+
+  <p>Aprenda mais sobre como usar const com objetos no capítulo: JS Const .</p>  
+  </div>
+
+  <h2>Definição de Objeto</h2>
+  <p>Você define (e cria) um objeto JavaScript com um literal de objeto:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};  
+    </code></pre>
+  </div>
+
+  <p>Espaços e quebras de linha não são importantes. Uma definição de objeto pode abranger várias linhas:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+    };  
+    </code></pre>
+  </div>
+
+  <h2>Propriedades do objeto</h2>
+  <p>Os pares nome: valores em objetos JavaScript são chamados de propriedades:</p>
+
+  <div class="tbl-overflow">
+    <table>
+     <tr>
+      <th style="width:20%">Property</th>
+      <th>Property Value</th>
+     </tr>
+     <tr>
+      <td>firstName</td>
+      <td>John</td>
+     </tr>
+     <tr>
+      <td>lastName</td>
+      <td>Doe</td>
+     </tr>
+     <tr>
+      <td>age</td>
+      <td>50</td>
+     </tr>
+     <tr>
+      <td>eyeColor</td>
+      <td>blue</td>
+     </tr>
+    </table>
+  </div>
+
+  <h2>Acessando Propriedades do Objeto</h2>
+  <p>Você pode acessar as propriedades do objeto de duas maneiras:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    objectName.propertyName
+    </code></pre>
+  </div>
+
+  <p>ou</p>
+
+  <div class="exemplo">
+    <pre><code>
+    objectName["propertyName"]  
+    </code></pre>
+  </div>
+
+  <p><strong>Exemplo 1:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    person.lastName;
+    </code></pre>
+  </div>
+
+  <p><strong>Exemplo 2:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    person["lastName"];
+    </code></pre>
+  </div>
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>Objetos JavaScript são contêineres para valores nomeados chamados propriedades.</p>  
+  </div>
+
+  <h2>Métodos de Objeto</h2>
+  <p>Os objetos também podem ter métodos.</p>
+
+  <p>Métodos são ações que podem ser executadas em objetos.</p>
+
+  <p>Os métodos são armazenados nas propriedades como definições de função.</p>
+
+  <div class="tbl-overflow">
+    <table>
+     <tr>
+      <th style="width:20%">Property</th>
+      <th>Property Value</th>
+     </tr>
+     <tr>
+      <td>firstName</td>
+      <td>John</td>
+     </tr>
+     <tr>
+      <td>lastName</td>
+      <td>Doe</td>
+     </tr>
+     <tr>
+      <td>age</td>
+      <td>50</td>
+     </tr>
+     <tr>
+      <td>eyeColor</td>
+      <td>blue</td>
+     </tr>
+     <tr>
+      <td>fullName</td>
+      <td>function() {return this.firstName + &quot; &quot; + this.lastName;}</td>
+     </tr>
+    </table>
+  </div>  
+
+  <p><span class="span-destaque-color"></span></p>
+  <div class="observacao">
+  <p>Um método é uma função armazenada como uma propriedade.</p>  
+  </div>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    const person = {
+      firstName: "John",
+      lastName : "Doe",
+      id       : 5566,
+      fullName : function() {
+        return this.firstName + " " + this.lastName;
+      }
+    };  
+    </code></pre>
+  </div>
+
+  <h2>A esta palavra-chave</h2>
+  <p>Em uma definição de função, <span class="span-destaque-color">this</span> refere-se ao "proprietário" da função.</p>
+
+  </p>No exemplo acima, <span class="span-destaque-color">this</span> é o objeto pessoa que "possui" a <span class="span-destaque-color">fullName</span> função.</p>
+
+  </p>Em outras palavras, <span class="span-destaque-color">this.firstName</span> significa <span class="span-destaque-color">firstName</span> propriedade deste objeto.</p>
+
+  </p>Leia mais sobre a <span class="span-destaque-color">this</span> palavra-chave em JS esta palavra- chave.</p>
+
+  <h2>Acessando métodos de objeto</h2>
+  <p>Você acessa um método de objeto com a seguinte sintaxe:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    objectName.methodName()  
+    </code></pre>
+  </div>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    name = person.fullName();  
+    </code></pre>
+  </div>
+
+  <p>Se você acessar um método sem os parênteses (), ele retornará a definição da função:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    name = person.fullName;  
+    </code></pre>
+  </div>
+
+  <h2>Não declare strings, números e booleanos como objetos!</h2>
+  <p>Quando uma variável JavaScript é declarada com a palavra-chave "<span class="span-destaque-color">new</span>", a variável é criada como um objeto:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    x = new String();   // Declares x as a String object
+    y = new Number();   // Declares y as a Number object
+    z = new Boolean();   // Declares z as a Boolean object  
+    </code></pre>
+  </div>
+
+  <p>Evite String, Number, e Booleanobjetos. Eles complicam seu código e reduzem a velocidade de execução.</p>
+
+  <p>Evite <span class="span-destaque-color">String</span>, <span class="span-destaque-color">Number</span>, e <span class="span-destaque-color">Boolean</span> objetos. Eles complicam seu código e reduzem a velocidade de execução.</p>
+
+  <p></p>
+
+  <p class="fonte-link">Fonte: <a href="https://www.w3schools.com/js/js_objects.asp" target="_blank">w3schools</a></p>
+  </div>
+</main>
+<hr style="border: 1px solid black;">
+<!-- <footer class="container py-5"> -->
+<footer class="py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/30.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/>
+      <small class="d-block mb-3 text-muted">Copyright &copy;2020 - Marcus LS</small>
+    </div>
+    <div class="col-6 col-md">
+    <h5> Programação </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/estudos.html">Estudos</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/algoritmo">Algoritmo</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/html">HTML</a> </li>
+        <li> <a class="text-muted" href="#"> CSS </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/javascript"> JAVASCRIPT </a> </li>
+        <li> <a class="text-muted" href="#"> PHP </a> </li>
+        <li> <a class="text-muted" href="#"> JAVA </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> BitBlockDig </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/index.html" target="_blank"> BBD </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/criptomoedas.html" target="_blank"> Criptomoedas </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/bitcoin.html" target="_blank"> Bitcoin </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/ethereum.html" target="_blank"> Ethereum </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/litecoin.html" target="_blank"> Litecoin </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Links </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank"> Trabalhadores da Seara </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Sobre </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="#"> Privacidade </a> </li>
+        <li> <a class="text-muted" href="#"> Termos </a> </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    <a href="#"><img style="float: right;" src="img/top.png"></a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
