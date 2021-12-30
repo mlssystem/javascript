@@ -154,9 +154,9 @@
 
   <p><span class="span-destaque-color"></span></p>
   <div class="observacao">
-  <p>É uma prática comum declarar objetos com a palavra-chave const.</p>  
+  <p>É uma prática comum declarar objetos com a palavra-chave const.</p>
 
-  <p>Aprenda mais sobre como usar const com objetos no capítulo: JS Const .</p>  
+  <p>Aprenda mais sobre como usar const com objetos no capítulo: JS Const .</p>
   </div>
 
   <h2>Definição de Objeto</h2>
@@ -165,7 +165,7 @@
   <p><strong>Exemplo:</strong></p>
   <div class="exemplo">
     <pre><code>
-    const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};  
+    const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
     </code></pre>
   </div>
 
@@ -179,7 +179,7 @@
     lastName: "Doe",
     age: 50,
     eyeColor: "blue"
-    };  
+    };
     </code></pre>
   </div>
 
@@ -225,7 +225,7 @@
 
   <div class="exemplo">
     <pre><code>
-    objectName["propertyName"]  
+    objectName["propertyName"]
     </code></pre>
   </div>
 
@@ -245,7 +245,7 @@
 
   <p><span class="span-destaque-color"></span></p>
   <div class="observacao">
-  <p>Objetos JavaScript são contêineres para valores nomeados chamados propriedades.</p>  
+  <p>Objetos JavaScript são contêineres para valores nomeados chamados propriedades.</p>
   </div>
 
   <h2>Métodos de Objeto</h2>
@@ -282,11 +282,11 @@
       <td>function() {return this.firstName + &quot; &quot; + this.lastName;}</td>
      </tr>
     </table>
-  </div>  
+  </div>
 
   <p><span class="span-destaque-color"></span></p>
   <div class="observacao">
-  <p>Um método é uma função armazenada como uma propriedade.</p>  
+  <p>Um método é uma função armazenada como uma propriedade.</p>
   </div>
 
   <p><strong>Exemplo:</strong></p>
@@ -299,11 +299,11 @@
       fullName : function() {
         return this.firstName + " " + this.lastName;
       }
-    };  
+    };
     </code></pre>
   </div>
 
-  <h2>A esta palavra-chave</h2>
+  <h2>A <span class="span-destaque-color">this</span> palavra-chave</h2>
   <p>Em uma definição de função, <span class="span-destaque-color">this</span> refere-se ao "proprietário" da função.</p>
 
   </p>No exemplo acima, <span class="span-destaque-color">this</span> é o objeto pessoa que "possui" a <span class="span-destaque-color">fullName</span> função.</p>
@@ -317,14 +317,14 @@
 
   <div class="exemplo">
     <pre><code>
-    objectName.methodName()  
+    objectName.methodName()
     </code></pre>
   </div>
 
   <p><strong>Exemplo:</strong></p>
   <div class="exemplo">
     <pre><code>
-    name = person.fullName();  
+    name = person.fullName();
     </code></pre>
   </div>
 
@@ -333,7 +333,7 @@
   <p><strong>Exemplo:</strong></p>
   <div class="exemplo">
     <pre><code>
-    name = person.fullName;  
+    name = person.fullName;
     </code></pre>
   </div>
 
@@ -344,11 +344,9 @@
     <pre><code>
     x = new String();   // Declares x as a String object
     y = new Number();   // Declares y as a Number object
-    z = new Boolean();   // Declares z as a Boolean object  
+    z = new Boolean();   // Declares z as a Boolean object
     </code></pre>
   </div>
-
-  <p>Evite String, Number, e Booleanobjetos. Eles complicam seu código e reduzem a velocidade de execução.</p>
 
   <p>Evite <span class="span-destaque-color">String</span>, <span class="span-destaque-color">Number</span>, e <span class="span-destaque-color">Boolean</span> objetos. Eles complicam seu código e reduzem a velocidade de execução.</p>
 

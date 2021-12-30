@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Funções JavaScript</title>
-    <meta name="description" 
+    <meta name="description"
     content="Funções JavaScript">
     <meta name="keywords" content="Funções JavaScript">
 
@@ -118,7 +118,7 @@
     <pre><code>
     function name(parameter1, parameter2, parameter3) {
       // code to be executed
-    }  
+    }
     </code></pre>
   </div>
 
@@ -130,12 +130,12 @@
 
   <p><span class="span-destaque-color"></span></p>
   <div class="observacao">
-  <p>Uma Função é quase igual a um Procedimento ou uma Sub-rotina, em outras linguagens de programação.</p>  
+  <p>Uma Função é quase igual a um Procedimento ou uma Sub-rotina, em outras linguagens de programação.</p>
   </div>
 
   <h2>Invocação de Função</h2>
   <p>O código dentro da função será executado quando "algo" invocar (chamar) a função:</p>
-  
+
   <p>• Quando ocorre um evento (quando um usuário clica em um botão)</p>
   <p>• Quando é invocado (chamado) a partir do código JavaScript
   <p>• Automaticamente (auto-invocado)
@@ -143,13 +143,13 @@
   <p>Você aprenderá muito mais sobre a invocação de função posteriormente neste tutorial.</p>
 
   <h2>Retorno de Função</h2>
-  <p>Quando o JavaScript atinge uma returninstrução, a função para de ser executada.</p>
+  <p>Quando o JavaScript atinge uma returnin strução, a função para de ser executada.</p>
 
   <p>Se a função foi chamada a partir de uma instrução, o JavaScript "retornará" para executar o código após a instrução de chamada.</p>
 
   <p>As funções geralmente calculam um valor de retorno . O valor de retorno é "retornado" de volta ao "chamador":</p>
 
-  <p><strong>Exemplo:</strong></p> 
+  <p><strong>Exemplo:</strong></p>
   <p>Calcule o produto de dois números e retorne o resultado:</p>
   <div class="exemplo">
     <pre><code>
@@ -157,14 +157,14 @@
 
     function myFunction(a, b) {
       return a * b;             // Function returns the product of a and b
-    }  
+    }
     </code></pre>
   </div>
 
   <p>O resultado em x será:</p>
   <div class="exemplo">
     <pre><code>
-    12 
+    12
     </code></pre>
   </div>
 
@@ -195,7 +195,7 @@
     function toCelsius(fahrenheit) {
       return (5/9) * (fahrenheit-32);
     }
-    document.getElementById("demo").innerHTML = toCelsius;  
+    document.getElementById("demo").innerHTML = toCelsius;
     </code></pre>
   </div>
 
@@ -207,7 +207,7 @@
   <div class="exemplo">
     <pre><code>
     let x = toCelsius(77);
-    let text = "The temperature is " + x + " Celsius";  
+    let text = "The temperature is " + x + " Celsius";
     </code></pre>
   </div>
 
@@ -215,14 +215,14 @@
 
   <div class="exemplo">
     <pre><code>
-    let text = "The temperature is " + toCelsius(77) + " Celsius";  
+    let text = "The temperature is " + toCelsius(77) + " Celsius";
     </code></pre>
   </div>
 
   <h2>Local Variables</h2>
   <p>Variáveis declaradas em uma função JavaScript tornam-se LOCAL para a função.</p>
 
-  <p>Variáveis ocais só podem ser acessadas de dentro da função.</p>
+  <p>Variáveis locais só podem ser acessadas de dentro da função.</p>
 
   <p><strong>Exemplo:</strong></p>
   <div class="exemplo">
@@ -234,7 +234,7 @@
       // code here CAN use carName
     }
 
-    // code here can NOT use carName  
+    // code here can NOT use carName
     </code></pre>
   </div>
 
