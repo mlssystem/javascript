@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title>Strings JS</title>
+    <meta name="description" content="Strings JS">
+    <meta name="keywords" content="Strings JS">
+    <meta name="author" content="Marcus">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mlsicon.ico">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .tbl-overflow {
+      overflow: auto;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    thead {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table, td {
+        border: .5px solid rgba(0,0,0,0.5);
+    }
+    th, td {
+        font-size: 1.2em;
+        padding: 8px;
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+        }
+    }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="https://mlssystem.github.io"><img id="icone" src="img/menu.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+            <a class="nav-link" href="https://mlssystem.github.io/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ Conteúdo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="w3schools.html">W3Schools</a>
+            </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Strings JS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>-->
+      </div>
+    </nav>
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  <p id="iniciando"></p>
+  <h1>JavaScript Strings</h1>
+  <p>As strings de JavaScript são para armazenar e manipular texto.</p>
+
+  <p>Uma string JavaScript contém zero ou mais caracteres escritos entre aspas.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let carName1 = "Volvo XC60";  // Double quotes
+    let carName2 = 'Volvo XC60';  // Single quotes  
+    </code></pre>
+  </div>
+
+  <p>Você pode usar aspas dentro de uma string, <strong>desde que não correspondam às aspas em torno da string</strong>:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let answer1 = "It's alright";
+    let answer2 = "He is called 'Johnny'";
+    let answer3 = 'He is called "Johnny"';
+    </code></pre>
+  </div>
+
+  <h2>Comprimento da string</h2>
+  <p>Para encontrar o comprimento de uma string, use a <span class="span-destaque-color">length</span> propriedade integrada:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let length = text.length;
+    </code></pre>
+  </div>
+
+  <h2>Personagem de fuga</h2>
+  <p>Como as strings devem ser escritas entre aspas, o JavaScript interpretará mal esta string:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    let text = "We are the so-called "Vikings" from the north.";
+    </code></pre>
+  </div>
+
+  <p>A string será cortada em "Nós somos os chamados".</p>
+
+  <p>A solução para evitar esse problema é usar o caractere de escape de barra invertida.</p>
+
+  <p>O \ caractere de escape de barra invertida ( ) transforma caracteres especiais em caracteres de string:</p>
+
+  <table>
+    <tr>
+      <th width="25%">Code</th>
+      <th>Result</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>\'</td>
+      <td>'</td>
+      <td>Single quote</td>
+    </tr>
+    <tr>
+      <td>\&quot;</td>
+      <td>&quot;</td>
+      <td>Double quote</td>
+    </tr>
+    <tr>
+      <td>\\</td>
+      <td>\</td>
+      <td>Backslash</td>
+    </tr>
+  </table>
+
+  <p>A sequência \"  insere aspas duplas em uma string:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "We are the so-called \"Vikings\" from the north.";
+    </code></pre>
+  </div>
+
+  <p>A sequência \'  insere aspas simples em uma string:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text= 'It\'s alright.';
+    </code></pre>
+  </div>
+
+  <p>A sequência \\  insere uma barra invertida em uma string:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "The character \\ is called backslash.";  
+    </code></pre>
+  </div>
+
+  <p>Six other escape sequences are valid in JavaScript:</p><table>
+     <tr>
+       <th width = "25%"> Código </th>
+       <th> Resultado </th>
+     </tr>
+     <tr>
+       <td> \ b </td>
+       <td> Backspace </td>
+     </tr>
+     <tr>
+       <td> \ f </td>
+       <td> Feed de formulário </td>
+     </tr>
+     <tr>
+       <td> \ n </td>
+       <td> Nova Linha </td>
+     </tr>
+     <tr>
+       <td> \ r </td>
+       <td> Devolução de carruagem </td>
+     </tr>
+     <tr>
+       <td> \ t </td>
+       <td> Tabulador horizontal </td>
+     </tr>
+     <tr>
+       <td> \ v </td>
+       <td> Tabulador vertical </td>
+     </tr>
+   </table>
+
+  <div class="observacao">
+  <p>Os 6 caracteres de escape acima foram originalmente projetados para controlar máquinas de escrever, teletipos e aparelhos de fax. Eles não fazem nenhum sentido em HTML.</p>  
+  </div>
+
+  <h2>Quebrando Longas Linhas de Código</h2>
+  <p>Para melhor legibilidade, os programadores geralmente gostam de evitar linhas de código com mais de 80 caracteres.</p>
+
+  <p>Se uma instrução JavaScript não couber em uma linha, o melhor lugar para quebrá-la é depois de um operador:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    document.getElementById("demo").innerHTML =
+    "Hello Dolly!";
+    </code></pre>
+  </div>
+
+  <p>Você também pode quebrar uma linha de código em uma string de texto com uma única barra invertida:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    document.getElementById("demo").innerHTML = "Hello \
+    Dolly!";  
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+  <p>O \ método não é o método preferido. Pode não ter suporte universal.</p>
+  <p>Alguns navegadores não permitem espaços atrás do \ caractere.</p>  
+  </div>
+
+  <p>Uma maneira mais segura de quebrar uma string é usar a adição de string:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    document.getElementById("demo").innerHTML = "Hello " +
+    "Dolly!";  
+    </code></pre>
+  </div>
+
+  <p>Você não pode quebrar uma linha de código com uma barra invertida:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    document.getElementById("demo").innerHTML = \
+    "Hello Dolly!";  
+    </code></pre>
+  </div>
+
+  <h2>Strings JavaScript como objetos</h2>
+  <p>Normalmente, as strings de JavaScript são valores primitivos, criados a partir de literais:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    let x = "John";
+    </code></pre>
+  </div>
+
+  <p>Mas as strings também podem ser definidas como objetos com a palavra <span class="span-destaque-color">new</span> - chave:</p>
+
+  <div class="exemplo">
+    <pre><code>
+    let y = new String("John");
+    </code></pre>
+  </div>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = "John";
+    let y = new String("John");  
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+  <p>Não crie objetos Strings.</p>
+  <p>A<span class="span-destaque-color">new</span> palavra-chave complica o código e diminui a velocidade de execução.</p>
+  <p>Objetos de string podem produzir resultados inesperados:</p>  
+  </div>
+
+  <p>Ao usar o <span class="span-destaque-color">==</span> operador, x e y são <strong>iguais:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let x = "John";
+    let y = new String("John");
+    </code></pre>
+  </div>
+
+  <p>Ao usar o <span class="span-destaque-color">===</span> operador, x e y <strong>não</strong> são <strong>iguais</strong>:</p>
+  <div class="exemplo">
+    <pre><code>
+    let x = "John";
+    let y = new String("John");
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+  <p>Observe a diferença entre <span class="span-destaque-color">(x==y)</span> e <span class="span-destaque-color">(x===y)</span>.</p>  
+  </div>
+
+  <p><span class="span-destaque-color">(x == y)</span> verdadeiro ou falso?</p>
+  <div class="exemplo">
+    <pre><code>
+    let x = new String("John");
+    let y = new String("John");
+    </code></pre>
+  </div>
+
+  <p><span class="span-destaque-color">(x === y)</span>  verdadeiro ou falso?</p>
+  <div class="exemplo">
+    <pre><code>
+    let x = new String("John");
+    let y = new String("John");      
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+  <p>Comparar dois objetos JavaScript <strong>sempre</strong> retorna <strong>falso.</strong></p>  
+  </div>
+
+  <div class="observacao">
+  <h3>Referência de string completa</h3>
+  <p>Para uma referência completa de String, vá para nosso:</p>
+  <p><a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">Referência completa de strings de JavaScript</a>.</p>
+  <p>A referência contém descrições e exemplos de todas as propriedades e métodos de string.</p>
+  </div>
+
+  <p></p>
+
+  <p class="fonte-link">Fonte: <a href="https://www.w3schools.com/js/js_strings.asp" target="_blank">w3schools</a></p>
+  </div>
+</main>
+<hr style="border: 1px solid black;">
+<!-- <footer class="container py-5"> -->
+<footer class="py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/30.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/>
+      <small class="d-block mb-3 text-muted">Copyright &copy;2020 - Marcus LS</small>
+    </div>
+    <div class="col-6 col-md">
+    <h5> Programação </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/estudos.html">Estudos</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/algoritmo">Algoritmo</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/html">HTML</a> </li>
+        <li> <a class="text-muted" href="#"> CSS </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/javascript"> JAVASCRIPT </a> </li>
+        <li> <a class="text-muted" href="#"> PHP </a> </li>
+        <li> <a class="text-muted" href="#"> JAVA </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> BitBlockDig </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/index.html" target="_blank"> BBD </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/criptomoedas.html" target="_blank"> Criptomoedas </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/bitcoin.html" target="_blank"> Bitcoin </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/ethereum.html" target="_blank"> Ethereum </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/litecoin.html" target="_blank"> Litecoin </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Links </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank"> Trabalhadores da Seara </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Sobre </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="#"> Privacidade </a> </li>
+        <li> <a class="text-muted" href="#"> Termos </a> </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    <a href="#"><img style="float: right;" src="img/top.png"></a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
