@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-112">
+  <head>
+    <meta charset="utf-8">
+    <title>Métodos Strings JS</title>
+    <meta name="description" content="Métodos Strings JS">
+    <meta name="keywords" content="Métodos Strings JS">
+    <meta name="author" content="Marcus">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="index, follow">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/mlsicon.ico">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/browserref.css">
+    <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .tbl-overflow {
+      overflow: auto;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    thead {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table, td {
+        border: .5px solid rgba(0,0,0,0.5);
+    }
+    th, td {
+        font-size: 1.2em;
+        padding: 8px;
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+         font-size: 3.5rem;
+        }
+    }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="https://mlssystem.github.io"><img id="icone" src="img/menu.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+            <a class="nav-link" href="https://mlssystem.github.io/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ Conteúdo</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="w3schools.html">W3Schools</a>
+            </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Métodos Strings JS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>-->
+      </div>
+    </nav>
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+  <p id="iniciando"></p>
+  <h1>Métodos Strings JS</h1>
+  <p>Os métodos de string ajudam você a trabalhar com strings.</p>
+
+  <h2>Métodos e propriedades de string</h2>
+  <p>Valores primitivos, como "John Doe", não podem ter propriedades ou métodos (porque não são objetos).</p>
+
+  <p>Mas com JavaScript, métodos e propriedades também estão disponíveis para valores primitivos, porque JavaScript trata os valores primitivos como objetos ao executar métodos e propriedades.</p>
+
+  <h2>Comprimento da string JavaScript</h2>
+  <p>A <span class="span-destaque-color">length</span> propriedade retorna o comprimento de uma string:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let length = txt.length;      
+    </code></pre>
+  </div>
+
+  <h2>Extraindo partes da corda</h2>
+  <p>Existem 3 métodos para extrair uma arte de uma string:</p>
+  <ul>
+    <li><span class="span-destaque-color">slice(start, end)</span></li>
+    <li><span class="span-destaque-color">substring(start, end)</span></li>
+    <li><span class="span-destaque-color">substr(start, length)</span></li>
+  </ul>
+
+  <h2>Fatia de string de JavaScript ()</h2>
+  <p><span class="span-destaque-color">slice()</span> extrai uma parte de uma string e retorna a parte extraída em uma nova string.</p>
+
+  <p>O método leva 2 parâmetros: a posição inicial e a posição final (final não incluído).</p>
+
+  <p>Este exemplo corta uma parte de uma corda da posição 7 à posição 12 (13-1):</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let str = "Apple, Banana, Kiwi";
+    let part = str.slice(7, 13);      
+    </code></pre>
+  </div>
+  
+  <div class="observacao">
+  <h4>Observação</h4>
+  <p>JavaScript conta posições a partir de zero.</p>
+
+  <p>A primeira posição é 0.</p>
+
+  <p>A segunda posição é 1.</p>  
+  </div>
+
+  <p>Se um parâmetro for negativo, a posição é contada a partir do final da string.</p>
+
+  <p>Este exemplo corta uma parte de uma string da posição -12 para a posição -6:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let str = "Apple, Banana, Kiwi";
+    let part = str.slice(-12, -6);
+    </code></pre>
+  </div>
+
+  <p>Se você omitir o segundo parâmetro, o método cortará o resto da string:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let part = str.slice(7);  
+    </code></pre>
+  </div>
+
+  <p>ou, contando a partir do final:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let part = str.slice(-12);  
+    </code></pre>
+  </div>
+
+  <h2>Substring de string de JavaScript ()</h2>
+  <p><span class="span-destaque-color">substring()</span> é semelhante a <span class="span-destaque-color">slice()</span>.</p>
+
+  <p>A diferença é que <span class="span-destaque-color">substring()</span> não aceita índices negativos.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let str = "Apple, Banana, Kiwi";
+    let part = str.substring(7, 13);
+    </code></pre>
+  </div>
+
+  <p>Se você omitir o segundo parâmetro, substring() cortará o resto da string.</p>
+
+  <h2>JavaScript String substr ()</h2>
+  <p><span class="span-destaque-color">substr()</span> é semelhante a <span class="span-destaque-color">slice()</span>.</p>
+
+  <p>A diferença é que o segundo parâmetro especifica o <strong>comprimento</strong> da parte extraída.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let str = "Apple, Banana, Kiwi";
+    let part = str.substr(7, 6);
+    </code></pre>
+  </div>
+
+  <p>Se você omitir o segundo parâmetro, <span class="span-destaque-color">substr()</span> cortará o resto da string.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let str = "Apple, Banana, Kiwi";
+    let part = str.substr(7);
+    </code></pre>
+  </div>
+
+  <p>Se o primeiro parâmetro for negativo, a posição conta a partir do final da string.</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let str = "Apple, Banana, Kiwi";
+    let part = str.substr(-4);  
+    </code></pre>
+  </div>
+
+  <h2>Substituição do conteúdo da string</h2>
+  <p>O <span class="span-destaque-color">replace()</span> método substitui um valor especificado por outro valor em uma string:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "Please visit Microsoft!";
+    let newText = text.replace("Microsoft", "W3Schools");  
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+    <h4>Observação</h4>
+    <p>O <span class="span-destaque-color">replace()</span> método não altera a string em que é chamado.</p>
+    <p>O <span class="span-destaque-color">replace()</span> método retorna uma nova string.</p>
+  </div>
+
+  <p>Por padrão, o <span class="span-destaque-color">replace()</span> método substitui <strong>apenas a primeira</strong> correspondência:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "Please visit Microsoft and Microsoft!";
+    let newText = text.replace("Microsoft", "W3Schools");      
+    </code></pre>
+  </div>
+
+  <p>Por padrão, o <span class="span-destaque-color">replace()</span> método diferencia maiúsculas de minúsculas. Escrever MICROSOFT (com maiúsculas) não funcionará:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "Please visit Microsoft!";
+    let newText = text.replace("MICROSOFT", "W3Schools");      
+    </code></pre>
+  </div>
+
+  <p>Para substituir não diferencia maiúsculas de minúsculas, use uma <strong>expressão regular</strong> com um /i sinalizador (insensível):</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "Please visit Microsoft!";
+    let newText = text.replace(/MICROSOFT/i, "W3Schools");  
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+    <h4>Observação</h4>
+    <p>As expressões regulares são escritas sem aspas.</p>
+  </div>
+
+  <p>Para substituir todas as correspondências, use uma <strong>expressão regular</strong> com um /g sinalizador (correspondência global):</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "Please visit Microsoft and Microsoft!";
+    let newText = text.replace(/Microsoft/g, "W3Schools");  
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+    <h4>Observação</h4>
+    <p>Você aprenderá muito mais sobre expressões regulares no capítulo <a href="https://www.w3schools.com/js/js_regexp.asp">Expressões regulares de JavaScript</a>.</p>
+  </div>
+
+  <h2>Convertendo para maiúsculas e minúsculas</h2>
+  <p>Uma string é convertida em maiúsculas com <span class="span-destaque-color">toUpperCase():</span></p>
+
+  <p>Uma string é convertida para minúsculas com <span class="span-destaque-color">toLowerCase()</span>:</p>
+
+  <h2>String de JavaScript toUpperCase ()</h2>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text1 = "Hello World!";
+    let text2 = text1.toUpperCase();          
+    </code></pre>
+  </div>
+
+  <h2>String de JavaScript toLowerCase ()</h2>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text1 = "Hello World!";       // String
+    let text2 = text1.toLowerCase();  // text2 is text1 converted to lower      
+    </code></pre>
+  </div>
+
+  <h2>JavaScript String concat ()</h2>
+  <span class="span-destaque-color">concat()</span> junta duas ou mais strings:
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text1 = "Hello";
+    let text2 = "World";
+    let text3 = text1.concat(" ", text2);      
+    </code></pre>
+  </div>
+
+  <p>O <span class="span-destaque-color">concat()</span> método pode ser usado em vez do operador mais. Essas duas linhas fazem o mesmo:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    text = "Hello" + " " + "World!";
+    text = "Hello".concat(" ", "World!");
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+  <h4>servação</h4>
+    <p>Todos os métodos de string retornam uma nova string. Eles não modificam a string original.</p>
+    <p>Disse formalmente:</p>
+    <p>Strings são imutáveis: Strings não podem ser alteradas, apenas substituídas.</p>
+  </div>
+
+  <h2>Corte de string de JavaScript ()</h2>
+  <p>O <span class="span-destaque-color">trim()</span> método remove os espaços em branco de ambos os lados de uma string:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text1 = "      Hello World!      ";
+    let text2 = text1.trim();      
+    </code></pre>
+  </div>
+
+  <h2>Preenchimento de string JavaScript</h2>
+  <p>ECMAScript 2017 adicionou dois métodos String: <span class="span-destaque-color">padStart</span> e <span class="span-destaque-color">padEnd</span> para suportar preenchimento no início e no final de uma string.</p>
+
+  <h2>JavaScript String padStart ()</h2>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "5";
+    let padded = text.padStart(4,0);      
+    </code></pre>
+  </div>
+
+  <h2>Suporte para navegador</h2>
+  <p><span class="span-destaque-color">padStart()</span> é um recurso ECMAScript 2017.</p>
+
+  <p>É compatível com todos os navegadores modernos:</p>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:20%;" class="bsEdge" title="Edge"></th>
+      <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:20%;" class="bsSafari" title="Safari"></th>
+      <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+    </tr>
+    <tr>
+      <td>Chrome 49</td>
+      <td>Edge 12</td>    
+      <td>Firefox 44</td>
+      <td>Safari 11</td>
+      <td>Opera 36</td>
+    </tr>
+    <tr>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+
+  <p><span class="span-destaque-color">padStart()</span> não é compatível com o Internet Explorer.</p>
+
+  <h2>String de JavaScript padEnd ()</h2>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "5";
+    let padded = text.padEnd(4,0);      
+    </code></pre>
+  </div>
+
+  <h2>Suporte para navegador</h2>
+  <p><span class="span-destaque-color">padEnd()</span> é um recurso ECMAScript 2017.</p>
+
+  <p>É compatível com todos os navegadores modernos:</p>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:20%;" class="bsEdge" title="Edge"></th>
+      <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:20%;" class="bsSafari" title="Safari"></th>
+      <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+    </tr>
+    <tr>
+      <td>Chrome 49</td>
+      <td>Edge 12</td>    
+      <td>Firefox 44</td>
+      <td>Safari 11</td>
+      <td>Opera 36</td>
+    </tr>
+    <tr>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+
+  <p><span class="span-destaque-color">padEnd()</span> não é compatível com o Internet Explorer.</p>
+
+  <h2>Extração de caracteres de string</h2>
+  <p>Existem 3 métodos para extrair caracteres de string:</p>
+
+  <ul>
+    <li><span class="span-destaque-color">charAt(position)</span></li>
+    <li><span class="span-destaque-color">charCodeAt(position)</span></li>
+    <li>Acesso à propriedade []</li>
+  </ul>
+
+  <h2>JavaScript String charAt ()</h2>
+  <p>O <span class="span-destaque-color">charAt()</span> método retorna o caractere em um índice especificado (posição) em uma string:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "HELLO WORLD";
+    let char = text.charAt(0);      
+    </code></pre>
+  </div>
+
+  <h2>JavaScript String charCodeAt ()</h2>
+  <p>O <span class="span-destaque-color">charCodeAt()</span> método retorna o Unicode do caractere em um índice especificado em uma string:</p>
+
+  </p>O método retorna um código UTF-16 (um número inteiro entre 0 e 65535).</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "HELLO WORLD";
+    let char = text.charCodeAt(0);      
+    </code></pre>
+  </div>
+
+  <h2>Acesso à Propriedade</h2>
+  <p>ECMAScript 5 (2009) permite acesso de propriedade [] em strings:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "HELLO WORLD";
+    let char = text[0];  
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+    <h4>Observação</h4>
+    <p>O acesso à propriedade pode ser um pouco imprevisível:</p>
+    <ul>
+      <li>Faz com que as strings pareçam matrizes (mas não são)</li>
+      <li>Se nenhum caractere for encontrado, [] retorna undefined, enquanto charAt () retorna uma string vazia.</li>
+      <li>É somente leitura. str [0] = "A" não dá erro (mas não funciona!)</li>
+    </ul>
+</div>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    let text = "HELLO WORLD";
+    text[0] = "A";    // Gives no error, but does not work      
+    </code></pre>
+  </div>
+
+  <h2>Convertendo uma String em uma Matriz</h2>
+
+  <div class="observacao">
+    <p>Se você quiser trabalhar com uma string como uma matriz, poderá convertê-la em uma matriz.</p>
+  </div>
+
+  <h2>Divisão de string JavaScript ()</h2>
+  <p>Uma string pode ser convertida em uma matriz com o <span class="span-destaque-color">split()</span> método:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    text.split(",")    // Split on commas
+    text.split(" ")    // Split on spaces
+    text.split("|")    // Split on pipe      
+    </code></pre>
+  </div>
+
+  <p>Se o separador for omitido, a matriz retornada conterá toda a string no índice [0].</p>
+
+  <p>Se o separador for "", a matriz retornada será uma matriz de caracteres únicos:</p>
+
+  <p><strong>Exemplo:</strong></p>
+  <div class="exemplo">
+    <pre><code>
+    text.split("")
+    </code></pre>
+  </div>
+
+  <div class="observacao">
+    <h4>Referência de string completa</h4>
+    <p>Para uma referência completa de String, vá para nosso:</p>
+    <p><a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">Referência completa de strings de JavaScript</a>.</p>
+    <p>A referência contém descrições e exemplos de todas as propriedades e métodos de string.</p>
+  </div>
+
+  <p></p>
+
+  <p class="fonte-link">Fonte: <a href="https://www.w3schools.com/js/js_string_methods.asp" target="_blank">w3schools</a></p>
+  </div>
+</main>
+<hr style="border: 1px solid black;">
+<!-- <footer class="container py-5"> -->
+<footer class="py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="img/30.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/>
+      <small class="d-block mb-3 text-muted">Copyright &copy;2020 - Marcus LS</small>
+    </div>
+    <div class="col-6 col-md">
+    <h5> Programação </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/estudos.html">Estudos</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/algoritmo">Algoritmo</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/html">HTML</a> </li>
+        <li> <a class="text-muted" href="#"> CSS </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/javascript"> JAVASCRIPT </a> </li>
+        <li> <a class="text-muted" href="#"> PHP </a> </li>
+        <li> <a class="text-muted" href="#"> JAVA </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> BitBlockDig </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/index.html" target="_blank"> BBD </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/criptomoedas.html" target="_blank"> Criptomoedas </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/bitcoin.html" target="_blank"> Bitcoin </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/ethereum.html" target="_blank"> Ethereum </a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/bitblockdig/litecoin.html" target="_blank"> Litecoin </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Links </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="https://bibliasagrada.github.io" target="_blank" >Bíblia</a> </li>
+        <li> <a class="text-muted" href="https://mlssystem.github.io/trabalhadoresdaseara" target="_blank"> Trabalhadores da Seara </a> </li>
+      </ul>
+    </div>
+    <div class = "col-6 col-md">
+      <h5> Sobre </h5>
+      <ul class = "list-unstyled text-small">
+        <li> <a class="text-muted" href="#"> Privacidade </a> </li>
+        <li> <a class="text-muted" href="#"> Termos </a> </li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    <a href="#"><img style="float: right;" src="img/top.png"></a>
+  </p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
