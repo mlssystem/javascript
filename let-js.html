@@ -85,44 +85,44 @@
   <div class="container">
   <p id="iniciando"></p>
   <h1>Let JS</h1>
-  <p>A letpalavra-chave foi introduzida em <a href="https://www.w3schools.com/js/js_es6.asp">ES6 (2015)</a></p>
+  <p>A <span class="span-destaque-color">let</span> palavra-chave foi introduzida em <a href="https://www.w3schools.com/js/js_es6.asp">ES6 (2015)</a></p>
 
-  <p>Variáveis definidas com letnão podem ser redeclaradas.
+  <p>Variáveis definidas com <span class="span-destaque-color">let</span> não podem ser redeclaradas.
 
-  <p>As variáveis definidas com letdevem ser declaradas antes do uso.</p>
+  <p>As variáveis definidas com <span class="span-destaque-color">let</span> devem ser declaradas antes do uso.</p>
 
-  <p>As variáveis definidas com lettêm Bloco de Escopo.</p>
+  <p>As variáveis definidas com <span class="span-destaque-color">let</span> têm Bloco de Escopo.</p>
 
   <h2>Não pode ser redeclarado</h2>
-  <p>Variáveis definidas com letnão podem ser declaradas novamente.</p>
+  <p>Variáveis definidas com <span class="span-destaque-color">let</span> não podem ser declaradas novamente.</p>
 
   <p>Você não pode redeclarar acidentalmente uma variável.</p>
 
-  <p>Com letvocê não pode fazer isso:</p>
+  <p>Com <span class="span-destaque-color">let,</span> você não pode fazer isso:</p>
 
   <p><strong>Exemplo:</strong></p>
   <div class="exemplo">
     <pre><code>
     let x = "John Doe";
     let x = 0;
-    // SyntaxError: 'x' has already been declared  
+    // SyntaxError: 'x' has already been declared
     </code></pre>
-  </div>  
+  </div>
 
-  <p>Com varvocê pode:</p>
+  <p>Com <span class="span-destaque-color">var</span> você pode:</p>
 
   <p><strong>Exemplo:</strong></p>
   <div class="exemplo">
     <pre><code>
     var x = "John Doe";
-    var x = 0; 
+    var x = 0;
     </code></pre>
-  </div>   
+  </div>
 
   <h2>Escopo do Bloco</h2>
   <p>Antes do ES6 (2015), JavaScript tinha apenas escopo global e escopo de função.</p>
 
-  <p>ES6 introduziu duas novas palavras-chave JavaScript importantes: lete const.</p>
+  <p>ES6 introduziu duas novas palavras-chave JavaScript importantes: <span class="span-destaque-color">let</span> e <span class="span-destaque-color">const</span>.</p>
 
   <p>Essas duas palavras-chave fornecem Block Scope em JavaScript.</p>
 
@@ -134,11 +134,11 @@
     {
     let x = 2;
     }
-    // x can NOT be used here  
+    // x can NOT be used here
     </code></pre>
   </div>
 
-  <p>Variáveis declaradas com a varpalavra - chave NÃO podem ter escopo de bloco.</p>
+  <p>Variáveis declaradas com a <span class="span-destaque-color">var</span> palavra - chave NÃO podem ter escopo de bloco.</p>
 
   <p>Variáveis declaradas dentro de um bloco {} podem ser acessadas de fora do bloco.</p>
 
@@ -148,12 +148,12 @@
     {
       var x = 2;
     }
-    // x CAN be used here  
+    // x CAN be used here
     </code></pre>
   </div>
 
   <h2>Variáveis de redeclaração</h2>
-  <p>Redeclarar uma variável usando a varpalavra - chave pode causar problemas.</p>
+  <p>Redeclarar uma variável usando a <span class="span-destaque-color">var</span> palavra - chave pode causar problemas.</p>
 
   <p>Redeclarar uma variável dentro de um bloco também redeclarará a variável fora do bloco:</p>
 
@@ -168,11 +168,11 @@
     // Here x is 2
     }
 
-    // Here x is 2  
+    // Here x is 2
     </code></pre>
   </div>
 
-  <p>Redeclarar uma variável usando a letpalavra - chave pode resolver esse problema.</p>
+  <p>Redeclarar uma variável usando a <span class="span-destaque-color">let</span> palavra - chave pode resolver esse problema.</p>
 
   <p>Redeclarar uma variável dentro de um bloco não redeclarará a variável fora do bloco:</p>
 
@@ -187,14 +187,14 @@
     // Here x is 2
     }
 
-    // Here x is 10  
+    // Here x is 10
     </code></pre>
   </div>
 
   <h2>Suporte para navegador</h2>
-  <p>A letpalavra-chave não é totalmente compatível com o Internet Explorer 11 ou anterior.</p>
+  <p>A <span class="span-destaque-color">let</span> palavra-chave não é totalmente compatível com o Internet Explorer 11 ou anterior.</p>
 
-  <p>A tabela a seguir define as primeiras versões do navegador com suporte total para a letpalavra-chave:</p>
+  <p>A tabela a seguir define as primeiras versões do navegador com suporte total para a <span class="span-destaque-color">let</span> palavra-chave:</p>
 
   <table class="browserref notranslate">
     <tr>
@@ -202,18 +202,18 @@
       <th style="width:20%;" class="bsEdge" title="Edge"></th>
       <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
       <th style="width:20%;" class="bsSafari" title="Safari"></th>
-      <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+      <th style="width:20%;" class="bsOpera" title="Opera"></th>
     </tr>
     <tr>
       <td>Chrome 49</td>
-      <td>Edge 12</td>    
+      <td>Edge 12</td>
       <td>Firefox 44</td>
       <td>Safari 11</td>
       <td>Opera 36</td>
     </tr>
     <tr>
       <td>Mar, 2016</td>
-      <td>Jul, 2015</td>    
+      <td>Jul, 2015</td>
       <td>Jan, 2015</td>
       <td>Sep, 2017</td>
       <td>Mar, 2016</td>
@@ -221,7 +221,7 @@
   </table>
 
   <h2>Redeclarando</h2>
-  <p>Redeclarar uma variável JavaScript com varé permitido em qualquer lugar em um programa:</p>
+  <p>Redeclarar uma variável JavaScript com <span class="span-destaque-color">var</span> é permitido em qualquer lugar em um programa:</p>
 
   <p><strong>Exemplo:</strong></p>
   <div class="exemplo">
@@ -230,11 +230,11 @@
     // Now x is 2
 
     var x = 3;
-    // Now x is 3  
+    // Now x is 3
     </code></pre>
   </div>
 
-  <p>Com let, NÃO é permitido redeclarar uma variável no mesmo bloco:</p>
+  <p>Com <span class="span-destaque-color">let</span>, NÃO é permitido redeclarar uma variável no mesmo bloco:</p>
 
   <p><strong>Exemplo:</strong></p>
   <div class="exemplo">
@@ -253,7 +253,7 @@
     </code></pre>
   </div>
 
-  <p>Redeclarar uma variável com let, em outro bloco, IS permitido:</p>
+  <p>Redeclarar uma variável com <span class="span-destaque-color">let</span>, em outro bloco, é permitido:</p>
 
   <p><strong>Exemplo:</strong></p>
   <div class="exemplo">
@@ -266,7 +266,7 @@
 
     {
     let x = 4;    // Allowed
-    }  
+    }
     </code></pre>
   </div>
 
@@ -279,21 +279,21 @@
   <div class="exemplo">
     <pre><code>
     carName = "Volvo";
-    var carName;  
+    var carName;
     </code></pre>
   </div>
 
   <p>Se você quiser aprender mais sobre içamento, estude o capítulo içamento JavaScript.</p>
 
-  <p>Variáveis definidas com lettambém são içadas para o topo do bloco, mas não inicializadas.</p>
+  <p>Variáveis definidas com <span class="span-destaque-color">let</span> também são içadas para o topo do bloco, mas não inicializadas.</p>
 
-  <p>Significado: Usar uma letvariável antes de ser declarada resultará em ReferenceError:</p>
+  <p>Significado: Usar uma <span class="span-destaque-color">let</span> variável antes de ser declarada resultará em ReferenceError:</p>
 
   <p><strong>Exemplo:</strong></p>
   <div class="exemplo">
     <pre><code>
     carName = "Saab";
-    let carName = "Volvo";  
+    let carName = "Volvo";
     </code></pre>
   </div>
 
